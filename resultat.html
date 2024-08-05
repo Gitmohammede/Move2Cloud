@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Results</h1>
+    <p id="totalScore"></p>
+    <p id="sectionScores"></p>
+
+    <script>
+        // Fonction pour obtenir les paramètres de requête de l'URL
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Afficher les résultats sur la page
+        document.addEventListener('DOMContentLoaded', () => {
+            const totalScore = getQueryParam('totalScore');
+            const sectionScores = decodeURIComponent(getQueryParam('sectionScores'));
+
+            document.getElementById('totalScore').textContent = `Total Score: ${totalScore}`;
+            document.getElementById('sectionScores').textContent = `Section Scores: ${sectionScores}`;
+        });
+    </script>
+</body>
+</html>

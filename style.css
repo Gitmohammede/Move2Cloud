@@ -1,0 +1,204 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   background-color: #eff2f4;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/*
+.hero{
+    margin-top: 0px;
+    width: 100%;
+    height: 100vh;
+     
+ }
+*/
+/*
+nav{
+    width: 100%;
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+*/
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    height: 60px; /* Adjust this value to control the size of the logo */
+}
+.cloud-factory {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    height: 105px; /* Adjust this value to control the size of the logo */
+}
+.feature-img{
+    position: absolute;
+    top:    120px;
+    right: 0px;
+    margin-top: 0px;
+    height: 500px;
+ }
+.bttn{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    position: absolute;
+    right: 190px;
+    top: 30px;
+    padding: 10px;
+    text-align: center;
+    background: #007BFF;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px RGBA(0,0,0,0.1);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+.bttn:hover, .btn:focus, .btn:active{
+    box-shadow: 0 0 20px RGBA(0,0,0,0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.bttn ::after{
+    content: '';
+    position: absolute;
+    background-color: aqua;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.bttn:hover::after{
+    width: 100%;
+}
+ /*
+nav ul li{
+    flex: 1;
+    position: absolute;
+    top: 50px;
+    right: 180px;
+    
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    
+}
+nav ul li a::before{
+    content: '';
+    width: 100%;
+    height: 0px;
+    background: burlywood;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: -5px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transition: height 0.5s;
+}
+nav ul li a:hover::before{
+    height: 85px;
+}
+    */
+/*
+nav .logo{
+    width: 150px;
+    cursor: pointer;
+}
+*/
+/*
+nav .cloud-factory{
+    width: 150px;
+    cursor: pointer;
+}
+*/
+/*
+nav ul{
+    flex: 1;
+    text-align: right;
+    margin-right: 150px;
+}
+*/
+/*
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px 10px;
+}
+*/
+
+
+
+/*
+.col{
+   flex-basis: 50%;
+   position: relative;
+}
+
+ .col h1{
+    margin-top: 180px;
+    font-size: 40px;
+    font-weight: 600;
+ }
+ .col a{
+   text-decoration: none;
+   padding: 18px 50px;
+   border-radius: 30px;
+   background: blue;
+   display: inline-block;
+   color: tomato;
+   font-weight: 700;
+   margin-top: 70px;
+   box-shadow: 5px 8px 10px RGBA(0,0,0,0.1);
+ }
+   */
+
+
+.container h1 {
+    position: absolute;
+    margin-top: 100px;
+    font-size: 30px;
+    font-style: #007BFF;
+    font-weight: 600;
+    top: 80px;
+    left: 10px;
+    
+}   
+.container1 h1{
+    position: absolute;
+    margin-top: 150px;
+    font-size: 25px;
+    font-style: #007BFF;
+    font-weight: 400;
+    top: 100px;
+    left: 10px;
+}  
+
+.btn {
+    position: absolute;
+    font-weight: 700;
+    margin-top: 200px;
+    top: 120px;
+    left: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: #0056b3;
+}
+

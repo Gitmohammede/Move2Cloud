@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'Évaluation</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="icon" href="add-removebg-preview.png" sizes="64x64"type="image/x-icon">
+    <style>
+        .section {
+            display: none;
+            margin-bottom: 50px;
+        }
+        .section.active {
+            display: block;
+        }
+    </style>
+    <style>
+        .result-percentage {
+          color: green;
+          font-weight: bold;
+        }
+        h1 {
+            color: green;
+        }
+        h2 {
+            color: rgb(209, 98, 13);
+        }
+      </style>
+      
+</head>
+<body>
+    <div class="container">
+        <form id="percentageForm">
+            <h1>Le Formulaire Prendra Environ 20 mins</h1>
+            <div id="Architecture Technique" class="section active">
+            <h2>1. Architecture Technique </h2> 
+            <h3>a. Architecture Actuelle :</h3> 
+            <div class="question">
+                <p>1. Quels sont les principaux composants de l'architecture actuelle ?</p>
+                <label><input type="radio" name="q1" value="25"> A. Serveurs physiques uniquement  </label><br>
+                <label><input type="radio" name="q1" value="50"> B. Serveurs physiques et machines virtuelles    </label><br>
+                <label><input type="radio" name="q1" value="75"> C. Conteneurs et machines virtuelles    </label><br>
+                <label><input type="radio" name="q1" value="100"> D. Architecture basée sur des microservices    </label>
+            </div>
+            <div class="question">
+                <p>2. Quels systèmes d'exploitation et logiciels sont actuellement utilisés ?</p>
+                <label><input type="radio" name="q2" value="25"> A. Systèmes d'exploitation obsolètes et logiciels propriétaires  </label><br>
+                <label><input type="radio" name="q2" value="50"> B. Systèmes d'exploitation actuels avec quelques logiciels propriétaires   </label><br>
+                <label><input type="radio" name="q2" value="75"> C. Systèmes d'exploitation open-source avec des logiciels open-source    </label><br>
+                <label><input type="radio" name="q2" value="100"> D. Dernières versions des systèmes d'exploitation et logiciels à jour    </label>
+            </div>
+            <div class="question">
+                <p>3. Combien d'environnements (développement, test, production) sont en place ?</p>
+                <label><input type="radio" name="q4" value="25"> A. Un seul environnement pour tout  </label><br>
+                <label><input type="radio" name="q4" value="50"> B. Environnements de développement et de production uniquement    </label><br>
+                <label><input type="radio" name="q4" value="75"> C. Environnements de développement, test, et production séparés    </label><br>
+                <label><input type="radio" name="q4" value="100"> D. Environnements multiples pour développement, test, staging et production    </label>
+            </div>
+            <div class="question">
+                <p>4. L'architecture actuelle est-elle bien documentée ?</p>
+                <label><input type="radio" name="q4" value="25"> A. Aucune documentation disponible  </label><br>
+                <label><input type="radio" name="q4" value="50"> B. Documentation partielle et obsolète    </label><br>
+                <label><input type="radio" name="q4" value="75"> C. Documentation existante mais incomplète    </label><br>
+                <label><input type="radio" name="q4" value="100"> D. Documentation complète et à jour    </label>
+            </div>
+
+            <h3>b. Scalabilité et Performance </h3>
+            <div class="question">
+                <p>1. Comment la plateforme gère-t-elle les variations de charge ?</p>
+                <label><input type="radio" name="q5" value="25"> A. Pas de mécanismes en place  </label><br>
+                <label><input type="radio" name="q5" value="50"> B. Mécanismes manuels    </label><br>
+                <label><input type="radio" name="q5" value="75"> C. Mécanismes automatiques de base    </label><br>
+                <label><input type="radio" name="q5" value="100"> D. Mécanismes automatiques avancés avec auto-scaling    </label>
+            </div>
+            <div class="question">
+                <p>2. Quels sont les indicateurs de performance actuels (temps de réponse, débit, etc.) ?</p>
+                <label><input type="radio" name="q6" value="25"> A. Inconnus ou non mesurés  </label><br>
+                <label><input type="radio" name="q6" value="50"> B. Mesurés mais avec des limitations significatives    </label><br>
+                <label><input type="radio" name="q6" value="75"> C. Mesurés avec des performances acceptables    </label><br>
+                <label><input type="radio" name="q6" value="100"> D. Mesurés avec de bonnes performances    </label>
+            </div>
+            <div class="question">
+                <p>3. Des tests de charge ont-ils été réalisés ?</p>
+                <label><input type="radio" name="q7" value="25"> A. Non  </label><br>
+                <label><input type="radio" name="q7" value="50"> B. Oui, de manière ponctuelle    </label><br>
+                <label><input type="radio" name="q7" value="75"> C. Oui, régulièrement mais sans analyse approfondie    </label><br>
+                <label><input type="radio" name="q7" value="100"> D. Oui, régulièrement avec analyse et optimisation    </label>
+            </div>
+            <div class="question">
+                <p>4. Quels sont les besoins prévus en termes de scalabilité pour les années à venir ?</p>
+                <label><input type="radio" name="q8" value="25"> A. Aucune estimation  </label><br>
+                <label><input type="radio" name="q8" value="50"> B. Croissance minimale prévue    </label><br>
+                <label><input type="radio" name="q8" value="75"> C. Croissance modérée prévue    </label><br>
+                <label><input type="radio" name="q8" value="100"> D. Croissance significative prévue    </label>
+            </div>
+             
+            <h3>c. Résilience et Haute Disponibilité</h3>
+            <div class="question">
+                <p>1. Quels mécanismes de continuité du service sont actuellement en place ?</p>
+                <label><input type="radio" name="q9" value="25"> A. Aucun  </label><br>
+                <label><input type="radio" name="q9" value="50"> B. Plans de continuité de service basiques    </label><br>
+                <label><input type="radio" name="q9" value="75"> C. Plans de continuité de service modérés    </label><br>
+                <label><input type="radio" name="q9" value="100"> D. Plans de continuité de service avancés et documentés    </label>
+            </div>
+            <div class="question">
+                <p>2. Quels composants de l'architecture bénéficient de redondance (serveurs, réseaux, bases de données) ?</p>
+                <label><input type="radio" name="q10" value="25"> A. Aucun  </label><br>
+                <label><input type="radio" name="q10" value="50"> B. Quelques composants critiques seulement    </label><br>
+                <label><input type="radio" name="q10" value="75"> C. La plupart des composants critiques    </label><br>
+                <label><input type="radio" name="q10" value="100"> D. Tous les composants critiques    </label>
+            </div>
+            <div class="question">
+                <p>3. Quels sont les temps d'indisponibilité (planned/unplanned) actuels ?</p>
+                <label><input type="radio" name="q11" value="25"> A. Fréquents (plusieurs fois par mois)  </label><br>
+                <label><input type="radio" name="q11" value="50"> B. Occasionnels (quelques fois par an)    </label><br>
+                <label><input type="radio" name="q11" value="75"> C. Rares (une fois par an ou moins)    </label><br>
+                <label><input type="radio" name="q11" value="100"> D. Très rares (moins d'une fois par an)    </label>
+            </div>
+            <div class="question">
+                <p>4. Quelle est la disponibilité cible (99.9%, 99.99%, etc.) pour la plateforme ?</p>
+                <label><input type="radio" name="q12" value="25"> A. 99%  </label><br>
+                <label><input type="radio" name="q12" value="50"> B. 99.5%    </label><br>
+                <label><input type="radio" name="q12" value="75"> C. 99.9%    </label><br>
+                <label><input type="radio" name="q12" value="100"> D. 99.99% ou plus    </label>
+            </div>
+            <button type="button" onclick="nextSection('   Évaluation de la plateforme')">Suivant</button>
+        </div>
+
+        <div id="   Évaluation de la plateforme" class="section">
+            <h2>2.    Évaluation de la plateforme</h2>
+            <h3>a. Analyse des dépendances</h3>
+            <div class="question">
+                <p>1. Quelles sont les principales dépendances matérielles de la plateforme ?</p>
+                <label><input type="radio" name="q13" value="25"> A. Aucun matériel spécifique requis</label><br>
+                <label><input type="radio" name="q13" value="50"> B. Matériel standard facile à remplacer</label><br>
+                <label><input type="radio" name="q13" value="75"> C. Matériel spécialisé mais disponible</label><br>
+                <label><input type="radio" name="q13" value="100"> D. Matériel spécialisé difficile à obtenir</label>
+            </div>
+            <div class="question">
+                <p>2. Quelles sont les dépendances logicielles de la plateforme ?</p>
+                <label><input type="radio" name="q14" value="25"> A. Aucun logiciel spécifique requis</label><br>
+                <label><input type="radio" name="q14" value="50"> B. Logiciels standard faciles à remplacer</label><br>
+                <label><input type="radio" name="q14" value="75"> C. Logiciels propriétaires mais bien supportés</label><br>
+                <label><input type="radio" name="q14" value="100"> D. Logiciels propriétaires obsolètes ou difficilement remplaçables</label>
+            </div>
+            <div class="question">
+                <p>3. Quelles sont les dépendances réseau de la plateforme ?</p>
+                <label><input type="radio" name="q15" value="25"> A. Aucune dépendance réseau spécifique</label><br>
+                <label><input type="radio" name="q15" value="50"> B. Réseau local standard</label><br>
+                <label><input type="radio" name="q15" value="75"> C. Réseau avec configuration personnalisée</label><br>
+                <label><input type="radio" name="q15" value="100"> D. Réseau complexe avec configurations spécifiques</label>
+            </div>
+            <div class="question">
+                <p>4. Quelle est la complexité des dépendances externes (fournisseurs, partenaires) ?</p>
+                <label><input type="radio" name="q16" value="25"> A. Aucune dépendance externe</label><br>
+                <label><input type="radio" name="q16" value="50"> B. Dépendances avec quelques fournisseurs</label><br>
+                <label><input type="radio" name="q16" value="75"> C. Dépendances avec plusieurs partenaires mais bien gérées</label><br>
+                <label><input type="radio" name="q16" value="100"> D. Dépendances multiples et complexes avec des partenaires critiques</label>
+            </div>
+            <h3>b. Évaluation des données</h3>
+            <div class="question">
+                <p>1. Quel est le volume de données actuel géré par la plateforme ?</p>
+                <label><input type="radio" name="q17" value="25"> A. Moins de 100 Go</label><br>
+                <label><input type="radio" name="q17" value="50"> B. Entre 100 Go et 1 To</label><br>
+                <label><input type="radio" name="q17" value="75"> C. Entre 1 To et 10 To</label><br>
+                <label><input type="radio" name="q17" value="100"> D. Plus de 10 To</label>
+            </div>
+            <div class="question">
+                <p>2. Quelle est la sensibilité des données traitées par la plateforme ?</p>
+                <label><input type="radio" name="q18" value="25"> A. Aucune donnée sensible</label><br>
+                <label><input type="radio" name="q18" value="50"> B. Données internes non critiques</label><br>
+                <label><input type="radio" name="q18" value="75"> C. Données sensibles modérées (ex: informations client)</label><br>
+                <label><input type="radio" name="q18" value="100"> D. Données hautement sensibles (ex: informations médicales, financières)</label>
+            </div>
+            <div class="question">
+                <p>3. Quelles sont les exigences de conformité des données ?</p>
+                <label><input type="radio" name="q19" value="25"> A. Aucune exigence spécifique</label><br>
+                <label><input type="radio" name="q19" value="50"> B. Exigences minimales (ex: politique interne)</label><br>
+                <label><input type="radio" name="q19" value="75"> C. Exigences modérées (ex: PCI-DSS)</label><br>
+                <label><input type="radio" name="q19" value="100"> D. Exigences strictes (ex: GDPR, HIPAA)</label>
+            </div>
+            <div class="question">
+                <p>4. Quel est le niveau de préparation pour la migration des données ?</p>
+                <label><input type="radio" name="q20" value="25"> A. Aucun plan en place</label><br>
+                <label><input type="radio" name="q20" value="50"> B. Plan basique mais incomplet</label><br>
+                <label><input type="radio" name="q20" value="75"> C. Plan modéré mais nécessite des ajustements</label><br>
+                <label><input type="radio" name="q20" value="100"> D. Plan complet et prêt à être exécuté</label>
+            </div>
+            <h3>c. Évaluation de l'architecture</h3>
+            <div class="question">
+                <p>1. Comment évaluez-vous la compatibilité de l'architecture actuelle avec le cloud ?</p>
+                <label><input type="radio" name="q21" value="25"> A. Pas du tout compatible</label><br>
+                <label><input type="radio" name="q21" value="50"> B. Partiellement compatible avec des modifications majeures</label><br>
+                <label><input type="radio" name="q21" value="75"> C. Modérément compatible avec quelques ajustements</label><br>
+                <label><input type="radio" name="q21" value="100"> D. Hautement compatible sans modifications majeures</label>
+            </div>
+            <div class="question">
+                <p>2. Quel niveau de modularité présente l'architecture actuelle ?</p>
+                <label><input type="radio" name="q22" value="25"> A. Aucun (architecture monolithique)</label><br>
+                <label><input type="radio" name="q22" value="50"> B. Quelques modules indépendants</label><br>
+                <label><input type="radio" name="q22" value="75"> C. Architecture partiellement modulaire</label><br>
+                <label><input type="radio" name="q22" value="100"> D. Architecture entièrement modulaire</label>
+            </div>
+            <div class="question">
+                <p>3. Quel est le niveau de tolérance aux pannes de l'architecture actuelle ?</p>
+                <label><input type="radio" name="q23" value="25"> A. Aucune tolérance aux pannes</label><br>
+                <label><input type="radio" name="q23" value="50"> B. Tolérance minimale avec quelques composants redondants</label><br>
+                <label><input type="radio" name="q23" value="75"> C. Tolérance modérée avec des mécanismes de reprise</label><br>
+                <label><input type="radio" name="q23" value="100"> D. Tolérance élevée avec redondance complète et mécanismes de récupération</label>
+            </div>
+            <div class="question">
+                <p>4. Quels sont les principaux obstacles à la migration de l'architecture actuelle ?</p>
+                <label><input type="radio" name="q24" value="25"> A. Aucun obstacle majeur</label><br>
+                <label><input type="radio" name="q24" value="50"> B. Quelques obstacles techniques faciles à surmonter</label><br>
+                <label><input type="radio" name="q24" value="75"> C. Obstacles techniques modérés nécessitant des efforts considérables</label><br>
+                <label><input type="radio" name="q24" value="100"> D. Obstacles techniques majeurs pouvant retarder ou empêcher la migration</label>
+            </div>
+            <h3>d. Pile technologique</h3>
+            <div class="question">
+                <p>1. Quelle est la compatibilité du stack technologique actuel avec les technologies cloud ?</p>
+                <label><input type="radio" name="q25" value="25"> A. Pas du tout compatible</label><br>
+                <label><input type="radio" name="q25" value="50"> B. Partiellement compatible avec des modifications majeures</label><br>
+                <label><input type="radio" name="q25" value="75"> C. Modérément compatible avec quelques ajustements</label><br>
+                <label><input type="radio" name="q25" value="100"> D. Hautement compatible sans modifications majeures</label>
+            </div>
+            <div class="question">
+                <p>2. Quel est le niveau de maturité des technologies utilisées dans le stack actuel ?</p>
+                <label><input type="radio" name="q26" value="25"> A. Technologies obsolètes</label><br>
+                <label><input type="radio" name="q26" value="50"> B. Technologies matures mais nécessitant des mises à jour</label><br>
+                <label><input type="radio" name="q26" value="75"> C. Technologies relativement récentes et bien supportées</label><br>
+                <label><input type="radio" name="q26" value="100"> D. Dernières technologies avec support actif</label>
+            </div>
+            <div class="question">
+                <p>3. Quelle est la flexibilité du stack technologique pour les mises à jour et les améliorations ?</p>
+                <label><input type="radio" name="q27" value="25"> A. Très inflexible</label><br>
+                <label><input type="radio" name="q27" value="50"> B. Peu flexible avec des limitations importantes</label><br>
+                <label><input type="radio" name="q27" value="75"> C. Relativement flexible avec quelques limitations</label><br>
+                <label><input type="radio" name="q27" value="100"> D. Très flexible et facilement améliorable</label>
+            </div>
+            <div class="question">
+                <p>4. Quels sont les coûts associés au maintien du stack technologique actuel ?</p>
+                <label><input type="radio" name="q28" value="25"> A. Très bas</label><br>
+                <label><input type="radio" name="q28" value="50"> B. Modérés</label><br>
+                <label><input type="radio" name="q28" value="75"> C. Élevés</label><br>
+                <label><input type="radio" name="q28" value="100"> D. Très élevés</label>
+            </div>
+            <h3>e. Analyse de performance</h3>
+            <div class="question">
+                <p>1. Quel est le temps de réponse moyen actuel de la plateforme ?</p>
+                <label><input type="radio" name="q29" value="25"> A. Plus de 5 secondes</label><br>
+                <label><input type="radio" name="q29" value="50"> B. Entre 2 et 5 secondes</label><br>
+                <label><input type="radio" name="q29" value="75"> C. Entre 1 et 2 secondes</label><br>
+                <label><input type="radio" name="q29" value="100"> D. Moins de 1 seconde</label>
+            </div>
+            <div class="question">
+                <p>2. Quel est le débit actuel (transactions par seconde) de la plateforme ?</p>
+                <label><input type="radio" name="q30" value="25"> A. Moins de 100 TPS</label><br>
+                <label><input type="radio" name="q30" value="50"> B. Entre 100 et 500 TPS</label><br>
+                <label><input type="radio" name="q30" value="75"> C. Entre 500 et 1000 TPS</label><br>
+                <label><input type="radio" name="q30" value="100"> D. Plus de 1000 TPS</label>
+            </div>
+            <div class="question">
+                <p>3. Quels sont les principaux goulots d'étranglement identifiés dans la plateforme actuelle ?</p>
+                <label><input type="radio" name="q31" value="25"> A. Aucune identification des goulots d'étranglement</label><br>
+                <label><input type="radio" name="q31" value="50"> B. Goulots d'étranglement occasionnels mais non critiques</label><br>
+                <label><input type="radio" name="q31" value="75"> C. Goulots d'étranglement modérés nécessitant une optimisation</label><br>
+                <label><input type="radio" name="q31" value="100"> D. Goulots d'étranglement majeurs impactant les performances</label>
+            </div>
+            <div class="question">
+                <p>4. La plateforme a-t-elle des mécanismes d'optimisation des performances en place ?</p>
+                <label><input type="radio" name="q32" value="25"> A. Aucun mécanisme</label><br>
+                <label><input type="radio" name="q32" value="50"> B. Mécanismes de base avec une optimisation minimale</label><br>
+                <label><input type="radio" name="q32" value="75"> C. Mécanismes modérés avec une optimisation régulière</label><br>
+                <label><input type="radio" name="q32" value="100"> D. Mécanismes avancés avec une optimisation continue</label>
+            </div>
+            
+            <button type="button" onclick="prevSection('Architecture Technique')">Précédent</button>
+            <button type="button" onclick="nextSection('Sécurité et conformité')">Suivant</button>
+        </div>
+    
+
+        <div id="Sécurité et conformité" class="section">
+        <h2>3. Sécurité et conformité</h2>
+        <h3>a. Évaluation de sécurité</h3>
+        <div class="question">
+            <p>1. Quelle est la posture actuelle de sécurité de la plateforme ?</p>
+            <label><input type="radio" name="q33" value="25"> A. Inconnue ou non évaluée</label><br>
+            <label><input type="radio" name="q33" value="50"> B. Évaluée de manière informelle</label><br>
+            <label><input type="radio" name="q33" value="75"> C. Évaluée avec quelques audits de sécurité ponctuels</label><br>
+            <label><input type="radio" name="q33" value="100"> D. Évaluée régulièrement avec des audits de sécurité complets</label>
+        </div>
+        <div class="question">
+            <p>2. Quels mécanismes de sécurité sont actuellement en place ?</p>
+            <label><input type="radio" name="q34" value="25"> A. Aucun mécanisme spécifique</label><br>
+            <label><input type="radio" name="q34" value="50"> B. Mécanismes de base (pare-feu, antivirus)</label><br>
+            <label><input type="radio" name="q34" value="75"> C. Mécanismes modérés (pare-feu, antivirus, gestion des identités)</label><br>
+            <label><input type="radio" name="q34" value="100"> D. Mécanismes avancés (pare-feu, antivirus, gestion des identités, détection des intrusions)</label>
+        </div>
+        <div class="question">
+            <p>3. Quelle est la fréquence des incidents de sécurité ?</p>
+            <label><input type="radio" name="q35" value="25"> A. Fréquents (plusieurs incidents par mois)</label><br>
+            <label><input type="radio" name="q35" value="50"> B. Occasionnels (quelques incidents par an)</label><br>
+            <label><input type="radio" name="q35" value="75"> C. Rares (un ou deux incidents par an)</label><br>
+            <label><input type="radio" name="q35" value="100"> D. Très rares (moins d'un incident par an)</label>
+        </div>
+        <div class="question">
+            <p>4. La plateforme dispose-t-elle d'un plan de réponse aux incidents ?</p>
+            <label><input type="radio" name="q36" value="25"> A. Aucun plan en place</label><br>
+            <label><input type="radio" name="q36" value="50"> B. Plan basique non documenté</label><br>
+            <label><input type="radio" name="q36" value="75"> C. Plan documenté mais rarement testé</label><br>
+            <label><input type="radio" name="q36" value="100"> D. Plan documenté et régulièrement testé</label>
+        </div>
+        
+        <h3>b. Les exigences de conformité</h3>
+        <div class="question">
+            <p>1. La plateforme est-elle conforme aux réglementations de l'industrie ?</p>
+            <label><input type="radio" name="q37" value="25"> A. Non conforme</label><br>
+            <label><input type="radio" name="q37" value="50"> B. Partiellement conforme</label><br>
+            <label><input type="radio" name="q37" value="75"> C. Conforme mais nécessite des mises à jour régulières</label><br>
+            <label><input type="radio" name="q37" value="100"> D. Complètement conforme et à jour</label>
+        </div>
+        <div class="question">
+            <p>2. Quels cadres de conformité s'appliquent à la plateforme ?</p>
+            <label><input type="radio" name="q38" value="25"> A. Aucun cadre spécifique</label><br>
+            <label><input type="radio" name="q38" value="50"> B. Quelques cadres basiques (ex: ISO 27001)</label><br>
+            <label><input type="radio" name="q38" value="75"> C. Plusieurs cadres de l'industrie (ex: GDPR, HIPAA)</label><br>
+            <label><input type="radio" name="q38" value="100"> D. Tous les cadres de l'industrie applicables et pertinents</label>
+        </div>
+        <div class="question">
+            <p>3. La plateforme a-t-elle subi des audits de conformité récents ?</p>
+            <label><input type="radio" name="q39" value="25"> A. Aucun audit réalisé</label><br>
+            <label><input type="radio" name="q39" value="50"> B. Un seul audit réalisé dans les dernières années</label><br>
+            <label><input type="radio" name="q39" value="75"> C. Audits réguliers mais espacés</label><br>
+            <label><input type="radio" name="q39" value="100"> D. Audits réguliers et fréquents</label>
+        </div>
+        <div class="question">
+            <p>4. Quel est le niveau de préparation pour répondre aux exigences de conformité dans le cloud ?</p>
+            <label><input type="radio" name="q40" value="25"> A. Aucun niveau de préparation</label><br>
+            <label><input type="radio" name="q40" value="50"> B. Préparation basique avec des lacunes significatives</label><br>
+            <label><input type="radio" name="q40" value="75"> C. Préparation modérée avec quelques lacunes</label><br>
+            <label><input type="radio" name="q40" value="100"> D. Préparation avancée et complète</label>
+        </div>
+        
+        <h3>c. Contrôles de sécurité du cloud</h3>
+        <div class="question">
+            <p>1. La plateforme utilise-t-elle des contrôles de sécurité spécifiques au cloud ?</p>
+            <label><input type="radio" name="q41" value="25"> A. Aucun contrôle spécifique</label><br>
+            <label><input type="radio" name="q41" value="50"> B. Quelques contrôles de base (cryptage des données)</label><br>
+            <label><input type="radio" name="q41" value="75"> C. Plusieurs contrôles modérés (cryptage, surveillance)</label><br>
+            <label><input type="radio" name="q41" value="100"> D. Contrôles avancés (cryptage, surveillance, IAM, gestion des menaces)</label>
+        </div>
+        <div class="question">
+            <p>2. Quel niveau de cryptage est utilisé pour les données en transit et au repos ?</p>
+            <label><input type="radio" name="q42" value="25"> A. Aucun cryptage</label><br>
+            <label><input type="radio" name="q42" value="50"> B. Cryptage basique pour les données en transit seulement</label><br>
+            <label><input type="radio" name="q42" value="75"> C. Cryptage modéré pour les données en transit et certaines données au repos</label><br>
+            <label><input type="radio" name="q42" value="100"> D. Cryptage avancé pour toutes les données en transit et au repos</label>
+        </div>
+        <div class="question">
+            <p>3. La plateforme utilise-t-elle des outils de surveillance et de détection des menaces ?</p>
+            <label><input type="radio" name="q43" value="25"> A. Aucun outil en place</label><br>
+            <label><input type="radio" name="q43" value="50"> B. Outils basiques de surveillance</label><br>
+            <label><input type="radio" name="q43" value="75"> C. Outils modérés de surveillance et détection</label><br>
+            <label><input type="radio" name="q43" value="100"> D. Outils avancés de surveillance, détection et réponse aux menaces</label>
+        </div>
+        <div class="question">
+            <p>4. Quel est le niveau de gestion des identités et des accès (IAM) en place ?</p>
+            <label><input type="radio" name="q44" value="25"> A. Aucun système IAM</label><br>
+            <label><input type="radio" name="q44" value="50"> B. Système IAM basique (gestion des utilisateurs)</label><br>
+            <label><input type="radio" name="q44" value="75"> C. Système IAM modéré (gestion des utilisateurs et des rôles)</label><br>
+            <label><input type="radio" name="q44" value="100"> D. Système IAM avancé (gestion des utilisateurs, des rôles, des politiques d'accès)</label>
+        </div>
+        <button type="button" onclick="prevSection('   Évaluation de la plateforme')">Précédent</button>
+        <button type="button" onclick="nextSection('Préparation organisationnelle')">Suivant</button>
+        </div>
+
+        <div id="Préparation organisationnelle" class="section">
+        <h2>4. Préparation organisationnelle</h2>
+        <h3>a. Compétences et expertise</h3>
+        <div class="question">
+            <p>1. Quel est le niveau de compétence de l'équipe pour gérer une migration vers le cloud ?</p>
+            <label><input type="radio" name="q45" value="25"> A. Aucune compétence en cloud</label><br>
+            <label><input type="radio" name="q45" value="50"> B. Compétences de base en cloud</label><br>
+            <label><input type="radio" name="q45" value="75"> C. Compétences modérées avec expérience pratique</label><br>
+            <label><input type="radio" name="q45" value="100"> D. Compétences avancées et expérience significative en cloud</label>
+        </div>
+        <div class="question">
+            <p>2. L'équipe dispose-t-elle de certifications pertinentes en cloud ?</p>
+            <label><input type="radio" name="q46" value="25"> A. Aucune certification</label><br>
+            <label><input type="radio" name="q46" value="50"> B. Certifications de niveau débutant</label><br>
+            <label><input type="radio" name="q46" value="75"> C. Certifications de niveau intermédiaire</label><br>
+            <label><input type="radio" name="q46" value="100"> D. Certifications de niveau avancé et spécialisées</label>
+        </div>
+        <div class="question">
+            <p>3. Quel est le niveau de familiarité de l'équipe avec les outils et technologies spécifiques au cloud ?</p>
+            <label><input type="radio" name="q47" value="25"> A. Pas du tout familiarisée</label><br>
+            <label><input type="radio" name="q47" value="50"> B. Familiarisation minimale</label><br>
+            <label><input type="radio" name="q47" value="75"> C. Familiarisation modérée avec les outils principaux</label><br>
+            <label><input type="radio" name="q47" value="100"> D. Forte familiarisation avec la plupart des outils et technologies</label>
+        </div>
+        <div class="question">
+            <p>4. Quelle est la capacité de l'équipe à apprendre et à s'adapter aux nouvelles technologies ?</p>
+            <label><input type="radio" name="q48" value="25"> A. Faible capacité d'adaptation</label><br>
+            <label><input type="radio" name="q48" value="50"> B. Capacité d'adaptation limitée avec des besoins importants en formation</label><br>
+            <label><input type="radio" name="q48" value="75"> C. Capacité d'adaptation modérée avec une formation continue nécessaire</label><br>
+            <label><input type="radio" name="q48" value="100"> D. Forte capacité d'adaptation avec une formation rapide et efficace</label>
+        </div>
+
+        <h3>b. Gestion du changement</h3>
+        <div class="question">
+            <p>1. L'organisation a-t-elle une stratégie de gestion du changement en place ?</p>
+            <label><input type="radio" name="q49" value="25"> A. Aucune stratégie</label><br>
+            <label><input type="radio" name="q49" value="50"> B. Stratégie basique non documentée</label><br>
+            <label><input type="radio" name="q49" value="75"> C. Stratégie documentée mais pas entièrement appliquée</label><br>
+            <label><input type="radio" name="q49" value="100"> D. Stratégie complète, documentée et régulièrement appliquée</label>
+        </div>
+        <div class="question">
+            <p>2. Quel est le niveau d'engagement des parties prenantes pour la migration vers le cloud ?</p>
+            <label><input type="radio" name="q50" value="25"> A. Faible engagement</label><br>
+            <label><input type="radio" name="q50" value="50"> B. Engagement limité avec quelques résistances</label><br>
+            <label><input type="radio" name="q50" value="75"> C. Engagement modéré avec un soutien croissant</label><br>
+            <label><input type="radio" name="q50" value="100"> D. Fort engagement avec un soutien total des parties prenantes</label>
+        </div>
+        <div class="question">
+            <p>3. Comment l'organisation gère-t-elle la communication concernant les changements ?</p>
+            <label><input type="radio" name="q51" value="25"> A. Communication minimale ou inexistante</label><br>
+            <label><input type="radio" name="q51" value="50"> B. Communication limitée aux informations essentielles</label><br>
+            <label><input type="radio" name="q51" value="75"> C. Communication régulière avec des mises à jour périodiques</label><br>
+            <label><input type="radio" name="q51" value="100"> D. Communication proactive et transparente avec des mises à jour fréquentes</label>
+        </div>
+        <div class="question">
+            <p>4. Quels sont les mécanismes de support et de formation disponibles pour faciliter la transition ?</p>
+            <label><input type="radio" name="q52" value="25"> A. Aucun support ou formation</label><br>
+            <label><input type="radio" name="q52" value="50"> B. Support et formation de base disponibles</label><br>
+            <label><input type="radio" name="q52" value="75"> C. Support et formation modérés avec quelques ressources</label><br>
+            <label><input type="radio" name="q52" value="100"> D. Support et formation complets avec des ressources abondantes et bien organisées</label>
+        </div>
+        <button type="button" onclick="prevSection('Sécurité et conformité')">Precedent</button>
+        <button type="button" onclick="nextSection('Gestion et sauvegarde des données')">Suivant</button>
+        </div>
+
+        <div id="Gestion et sauvegarde des données" class="section">
+        <h2>5. Gestion et sauvegarde des données</h2>
+        <h3>a. Gestion des données</h3>
+        <div class="question">
+            <p>1. Comment les données sont-elles actuellement organisées et stockées ?</p>
+            <label><input type="radio" name="q53" value="25"> A. Stockage non structuré et ad hoc</label><br>
+            <label><input type="radio" name="q53" value="50"> B. Stockage structuré avec des bases de données relationnelles</label><br>
+            <label><input type="radio" name="q53" value="75"> C. Stockage structuré avec des bases de données relationnelles et non relationnelles</label><br>
+            <label><input type="radio" name="q53" value="100"> D. Stockage structuré avec une gestion avancée des données (data lakes, data warehouses)</label>
+        </div>
+        <div class="question">
+            <p>2. Quel est le niveau de gouvernance des données en place ?</p>
+            <label><input type="radio" name="q54" value="25"> A. Aucune gouvernance spécifique</label><br>
+            <label><input type="radio" name="q54" value="50"> B. Gouvernance minimale avec des politiques de base</label><br>
+            <label><input type="radio" name="q54" value="75"> C. Gouvernance modérée avec des politiques documentées</label><br>
+            <label><input type="radio" name="q54" value="100"> D. Gouvernance avancée avec des politiques et des processus rigoureux</label>
+        </div>
+        <div class="question">
+            <p>3. Comment la qualité des données est-elle assurée ?</p>
+            <label><input type="radio" name="q55" value="25"> A. Aucune mesure de qualité des données</label><br>
+            <label><input type="radio" name="q55" value="50"> B. Mesures de qualité des données ad hoc</label><br>
+            <label><input type="radio" name="q55" value="75"> C. Contrôles réguliers de la qualité des données</label><br>
+            <label><input type="radio" name="q55" value="100"> D. Gestion proactive de la qualité des données avec des outils automatisés</label>
+        </div>
+        <div class="question">
+            <p>4. Quelles sont les pratiques en place pour la gestion des métadonnées ?</p>
+            <label><input type="radio" name="q56" value="25"> A. Aucune gestion des métadonnées</label><br>
+            <label><input type="radio" name="q56" value="50"> B. Gestion des métadonnées minimale</label><br>
+            <label><input type="radio" name="q56" value="75"> C. Gestion des métadonnées modérée avec des outils spécifiques</label><br>
+            <label><input type="radio" name="q56" value="100"> D. Gestion des métadonnées avancée avec des processus intégrés et automatisés</label>
+        </div>
+
+        <h3>b. Sauvegarde et récupération</h3>
+        <div class="question">
+            <p>1. Quelle est la fréquence des sauvegardes de données ?</p>
+            <label><input type="radio" name="q57" value="25"> A. Sauvegardes occasionnelles (hebdomadaires ou mensuelles)</label><br>
+            <label><input type="radio" name="q57" value="50"> B. Sauvegardes quotidiennes</label><br>
+            <label><input type="radio" name="q57" value="75"> C. Sauvegardes horaires</label><br>
+            <label><input type="radio" name="q57" value="100"> D. Sauvegardes en continu (temps réel)</label>
+        </div>
+        <div class="question">
+            <p>2. Comment les sauvegardes sont-elles stockées ?</p>
+            <label><input type="radio" name="q58" value="25"> A. Stockage local uniquement</label><br>
+            <label><input type="radio" name="q58" value="50"> B. Stockage local avec des copies sur site</label><br>
+            <label><input type="radio" name="q58" value="75"> C. Stockage local avec des copies hors site</label><br>
+            <label><input type="radio" name="q58" value="100"> D. Stockage local avec des copies dans le cloud</label>
+        </div>
+        <div class="question">
+            <p>3. Quel est le temps de récupération (RTO) et le point de récupération (RPO) définis pour les données ?</p>
+            <label><input type="radio" name="q59" value="25"> A. RTO et RPO non définis</label><br>
+            <label><input type="radio" name="q59" value="50"> B. RTO et RPO élevés (plusieurs jours)</label><br>
+            <label><input type="radio" name="q59" value="75"> C. RTO et RPO modérés (quelques heures)</label><br>
+            <label><input type="radio" name="q59" value="100"> D. RTO et RPO faibles (moins d'une heure)</label>
+        </div>
+        <div class="question">
+            <p>4. Les processus de sauvegarde et de récupération sont-ils testés régulièrement ?</p>
+            <label><input type="radio" name="q60" value="25"> A. Aucun test réalisé</label><br>
+            <label><input type="radio" name="q60" value="50"> B. Tests sporadiques</label><br>
+            <label><input type="radio" name="q60" value="75"> C. Tests réguliers mais avec des résultats variables</label><br>
+            <label><input type="radio" name="q60" value="100"> D. Tests réguliers avec des résultats documentés et optimisés</label>
+        </div>
+        <button type="button" onclick="prevSection('Préparation organisationnelle')">Précédent</button>
+        <button type="button" onclick="nextSection('Évaluation du projet')">Suivant</button>
+        </div>
+
+        <div id="Évaluation du projet" class="section">
+        <h2>6. Évaluation du projet</h2>
+        <h3>a. Alignement avec les objectifs commerciaux</h3>
+        <div class="question">
+            <p>1. En quoi la migration vers le cloud soutient-elle les objectifs stratégiques de l'organisation ?</p>
+            <label><input type="radio" name="q61" value="25"> A. Aucun soutien direct</label><br>
+            <label><input type="radio" name="q61" value="50"> B. Soutien limité à quelques objectifs</label><br>
+            <label><input type="radio" name="q61" value="75"> C. Soutien modéré à la majorité des objectifs</label><br>
+            <label><input type="radio" name="q61" value="100"> D. Soutien complet à tous les objectifs stratégiques</label>
+        </div>
+        <div class="question">
+            <p>2. Quelle est l'importance de la migration vers le cloud pour l'innovation et la croissance de l'entreprise ?</p>
+            <label><input type="radio" name="q62" value="25"> A. Peu ou pas d'impact sur l'innovation</label><br>
+            <label><input type="radio" name="q62" value="50"> B. Impact limité avec des gains marginaux</label><br>
+            <label><input type="radio" name="q62" value="75"> C. Impact modéré avec des améliorations notables</label><br>
+            <label><input type="radio" name="q62" value="100"> D. Impact significatif avec des opportunités de croissance majeures</label>
+        </div>
+        <div class="question">
+            <p>3. La migration vers le cloud contribue-t-elle à améliorer la compétitivité de l'entreprise ?</p>
+            <label><input type="radio" name="q63" value="25"> A. Aucun impact sur la compétitivité</label><br>
+            <label><input type="radio" name="q63" value="50"> B. Impact limité sur la compétitivité</label><br>
+            <label><input type="radio" name="q63" value="75"> C. Impact modéré sur la compétitivité</label><br>
+            <label><input type="radio" name="q63" value="100"> D. Impact majeur sur la compétitivité</label>
+        </div>
+        <div class="question">
+            <p>4. Quels avantages tangibles et intangibles la migration vers le cloud apportera-t-elle à l'organisation ?</p>
+            <label><input type="radio" name="q64" value="25"> A. Avantages peu clairs ou inexistants</label><br>
+            <label><input type="radio" name="q64" value="50"> B. Avantages tangibles mais peu d'avantages intangibles</label><br>
+            <label><input type="radio" name="q64" value="75"> C. Avantages tangibles et intangibles modérés</label><br>
+            <label><input type="radio" name="q64" value="100"> D. Avantages tangibles et intangibles significatifs</label>
+        </div>
+        
+        <h3>b.L'analyse coûts-avantages</h3>
+        <div class="question">
+            <p>1. Avez-vous estimé les coûts totaux de migration vers le cloud ?</p>
+            <label><input type="radio" name="q65" value="25"> A. Non estimé</label><br>
+            <label><input type="radio" name="q65" value="50"> B. Estimation approximative sans détails</label><br>
+            <label><input type="radio" name="q65" value="75"> C. Estimation détaillée des coûts de migration</label><br>
+            <label><input type="radio" name="q65" value="100"> D. Estimation détaillée et validation des coûts avec des projections à long terme</label>
+        </div>
+        <div class="question">
+            <p>2. Quels sont les principaux bénéfices attendus de la migration vers le cloud ?</p>
+            <label><input type="radio" name="q66" value="25"> A. Aucun bénéfice identifié</label><br>
+            <label><input type="radio" name="q66" value="50"> B. Bénéfices limités (ex: réduction des coûts opérationnels)</label><br>
+            <label><input type="radio" name="q66" value="75"> C. Bénéfices modérés (ex: réduction des coûts et amélioration de l'évolutivité)</label><br>
+            <label><input type="radio" name="q66" value="100"> D. Bénéfices significatifs (ex: réduction des coûts, amélioration de la performance, meilleure évolutivité)</label>
+        </div>
+        <div class="question">
+            <p>3. Quels sont les coûts associés à l'exploitation continue dans le cloud ?</p>
+            <label><input type="radio" name="q67" value="25"> A. Coûts non estimés</label><br>
+            <label><input type="radio" name="q67" value="50"> B. Coûts estimés mais peu détaillés</label><br>
+            <label><input type="radio" name="q67" value="75"> C. Coûts détaillés avec des prévisions de dépenses</label><br>
+            <label><input type="radio" name="q67" value="100"> D. Coûts détaillés avec des prévisions de dépenses et des analyses de rentabilité</label>
+        </div>
+        <div class="question">
+            <p>4. Avez-vous effectué une analyse comparative des coûts entre les solutions cloud et les solutions sur site ?</p>
+            <label><input type="radio" name="q68" value="25"> A. Pas d'analyse comparative</label><br>
+            <label><input type="radio" name="q68" value="50"> B. Analyse comparative superficielle</label><br>
+            <label><input type="radio" name="q68" value="75"> C. Analyse comparative détaillée</label><br>
+            <label><input type="radio" name="q68" value="100"> D. Analyse comparative approfondie avec scénarios de coûts variés</label>
+        </div>
+        
+        <h3>c. L'évaluation des risques</h3>
+        <div class="question">
+            <p>1. Quels sont les principaux risques associés à la migration vers le cloud identifiés ?</p>
+            <label><input type="radio" name="q69" value="25"> A. Aucun risque identifié</label><br>
+            <label><input type="radio" name="q69" value="50"> B. Risques mineurs et peu probables</label><br>
+            <label><input type="radio" name="q69" value="75"> C. Risques modérés avec des plans d'atténuation partiels</label><br>
+            <label><input type="radio" name="q69" value="100"> D. Risques significatifs avec des plans d'atténuation détaillés et complets</label>
+        </div>
+        <div class="question">
+            <p>2. Comment l'organisation évalue-t-elle la capacité à gérer les risques liés à la migration ?</p>
+            <label><input type="radio" name="q70" value="25"> A. Pas de capacité d'évaluation</label><br>
+            <label><input type="radio" name="q70" value="50"> B. Capacité limitée avec des évaluations ponctuelles</label><br>
+            <label><input type="radio" name="q70" value="75"> C. Capacité modérée avec des évaluations régulières et des mesures en place</label><br>
+            <label><input type="radio" name="q70" value="100"> D. Forte capacité avec des évaluations continues et des stratégies de gestion des risques bien établies</label>
+        </div>
+        <div class="question">
+            <p>3. Quels sont les impacts potentiels de la migration sur les opérations commerciales ?</p>
+            <label><input type="radio" name="q71" value="25"> A. Aucun impact évalué</label><br>
+            <label><input type="radio" name="q71" value="50"> B. Impact limité avec des perturbations mineures</label><br>
+            <label><input type="radio" name="q71" value="75"> C. Impact modéré avec des perturbations temporaires</label><br>
+            <label><input type="radio" name="q71" value="100"> D. Impact significatif avec des perturbations possibles mais bien gérées</label>
+        </div>
+        <div class="question">
+            <p>4. La migration a-t-elle été testée dans un environnement pilote pour évaluer les risques ?</p>
+            <label><input type="radio" name="q72" value="25"> A. Aucun test pilote réalisé</label><br>
+            <label><input type="radio" name="q72" value="50"> B. Test pilote limité avec des résultats partiels</label><br>
+            <label><input type="radio" name="q72" value="75"> C. Test pilote complet avec des résultats évalués</label><br>
+            <label><input type="radio" name="q72" value="100"> D. Test pilote complet avec des résultats évalués et des ajustements effectués</label>
+        </div>
+        <button type="button" onclick="prevSection('Gestion et sauvegarde des données')">Précédent</button>
+        <button type="button" onclick="nextSection('Licences et implications financières')">Suivant</button>
+        </div>
+
+        <div id="Licences et implications financières" class="section">
+        <h2>7. Licences et implications financières</h2>
+        <h3>a. Compatibilité des licences</h3>
+        <div class="question">
+            <p>1. Les licences logicielles actuelles sont-elles compatibles avec l'environnement cloud ?</p>
+            <label><input type="radio" name="q73" value="25"> A. Non compatible</label><br>
+            <label><input type="radio" name="q73" value="50"> B. Compatible avec des ajustements mineurs</label><br>
+            <label><input type="radio" name="q73" value="75"> C. Compatible avec des ajustements modérés</label><br>
+            <label><input type="radio" name="q73" value="100"> D. Complètement compatible sans ajustements nécessaires</label>
+        </div>
+        <div class="question">
+            <p>2. Quels sont les besoins de mise à jour ou de remplacement des licences pour la migration vers le cloud ?</p>
+            <label><input type="radio" name="q74" value="25"> A. Aucune mise à jour ou remplacement nécessaire</label><br>
+            <label><input type="radio" name="q74" value="50"> B. Mise à jour mineure des licences</label><br>
+            <label><input type="radio" name="q74" value="75"> C. Remplacement partiel des licences</label><br>
+            <label><input type="radio" name="q74" value="100"> D. Remplacement complet et mise à jour des licences nécessaires</label>
+        </div>
+        <div class="question">
+            <p>3. Les licences actuelles incluent-elles un support ou des services spécifiques au cloud ?</p>
+            <label><input type="radio" name="q75" value="25"> A. Aucun support ou service spécifique au cloud</label><br>
+            <label><input type="radio" name="q75" value="50"> B. Support limité pour le cloud</label><br>
+            <label><input type="radio" name="q75" value="75"> C. Support modéré avec des services partiels pour le cloud</label><br>
+            <label><input type="radio" name="q75" value="100"> D. Support complet avec des services spécifiques et adaptés au cloud</label>
+        </div>
+        <div class="question">
+            <p>4. Comment la gestion des licences sera-t-elle assurée dans le cloud ?</p>
+            <label><input type="radio" name="q76" value="25"> A. Pas de gestion de licences en place</label><br>
+            <label><input type="radio" name="q76" value="50"> B. Gestion manuelle des licences</label><br>
+            <label><input type="radio" name="q76" value="75"> C. Gestion automatisée des licences avec outils de suivi de base</label><br>
+            <label><input type="radio" name="q76" value="100"> D. Gestion automatisée avancée avec des outils de suivi et de conformité complets</label>
+        </div>
+        
+        <h3>b. Modèles de tarification</h3>
+        <div class="question">
+            <p>1. Avez-vous analysé les différents modèles de tarification des fournisseurs de cloud ?</p>
+            <label><input type="radio" name="q77" value="25"> A. Pas d'analyse effectuée</label><br>
+            <label><input type="radio" name="q77" value="50"> B. Analyse superficielle des modèles de tarification</label><br>
+            <label><input type="radio" name="q77" value="75"> C. Analyse détaillée avec comparaison des modèles</label><br>
+            <label><input type="radio" name="q77" value="100"> D. Analyse approfondie avec recommandations spécifiques</label>
+        </div>
+        <div class="question">
+            <p>2. Quelle est la flexibilité des modèles de tarification des fournisseurs de cloud ?</p>
+            <label><input type="radio" name="q78" value="25"> A. Peu flexible avec des coûts fixes</label><br>
+            <label><input type="radio" name="q78" value="50"> B. Modérément flexible avec des options de tarification limitées</label><br>
+            <label><input type="radio" name="q78" value="75"> C. Flexibilité modérée avec plusieurs options de tarification</label><br>
+            <label><input type="radio" name="q78" value="100"> D. Très flexible avec de nombreuses options et ajustements possibles</label>
+        </div>
+        <div class="question">
+            <p>3. Quels types de coûts récurrents et variables sont associés aux modèles de tarification des fournisseurs de cloud ?</p>
+            <label><input type="radio" name="q79" value="25"> A. Aucun coût récurrent ou variable identifié</label><br>
+            <label><input type="radio" name="q79" value="50"> B. Coûts récurrents de base et coûts variables mineurs</label><br>
+            <label><input type="radio" name="q79" value="75"> C. Coûts récurrents significatifs et coûts variables modérés</label><br>
+            <label><input type="radio" name="q79" value="100"> D. Coûts récurrents et variables bien définis avec des prévisions détaillées</label>
+        </div>
+        <div class="question">
+            <p>4. Quel niveau de transparence est offert par le fournisseur de cloud concernant la tarification ?</p>
+            <label><input type="radio" name="q80" value="25"> A. Peu ou pas de transparence</label><br>
+            <label><input type="radio" name="q80" value="50"> B. Transparence limitée avec des détails partiels</label><br>
+            <label><input type="radio" name="q80" value="75"> C. Transparence modérée avec des informations disponibles sur demande</label><br>
+            <label><input type="radio" name="q80" value="100"> D. Transparence complète avec des informations claires et détaillées</label>
+        </div>
+        
+        <h3>c. Prix ​​estimés</h3>
+        <div class="question">
+            <p>1. Avez-vous estimé les coûts de migration vers le cloud ?</p>
+            <label><input type="radio" name="q81" value="25"> A. Pas d'estimation effectuée</label><br>
+            <label><input type="radio" name="q81" value="50"> B. Estimation approximative sans détails</label><br>
+            <label><input type="radio" name="q81" value="75"> C. Estimation détaillée avec des coûts spécifiques identifiés</label><br>
+            <label><input type="radio" name="q81" value="100"> D. Estimation approfondie avec une analyse complète des coûts et des projections à long terme</label>
+        </div>
+        <div class="question">
+            <p>2. Quels sont les coûts prévus pour l'exploitation continue dans le cloud ?</p>
+            <label><input type="radio" name="q82" value="25"> A. Coûts non estimés</label><br>
+            <label><input type="radio" name="q82" value="50"> B. Coûts estimés de manière approximative</label><br>
+            <label><input type="radio" name="q82" value="75"> C. Coûts estimés avec des prévisions détaillées</label><br>
+            <label><input type="radio" name="q82" value="100"> D. Coûts estimés avec des prévisions détaillées et des analyses de rentabilité</label>
+        </div>
+        <div class="question">
+            <p>3. Comment les coûts estimés se comparent-ils aux coûts actuels d'exploitation sur site ?</p>
+            <label><input type="radio" name="q83" value="25"> A. Les coûts ne sont pas comparés</label><br>
+            <label><input type="radio" name="q83" value="50"> B. Comparaison superficielle des coûts</label><br>
+            <label><input type="radio" name="q83" value="75"> C. Comparaison détaillée avec des différences identifiées</label><br>
+            <label><input type="radio" name="q83" value="100"> D. Comparaison approfondie avec une analyse des économies et des coûts supplémentaires</label>
+        </div>
+        <div class="question">
+            <p>4. Quel est le retour sur investissement (ROI) prévu pour la migration vers le cloud ?</p>
+            <label><input type="radio" name="q84" value="25"> A. ROI non évalué</label><br>
+            <label><input type="radio" name="q84" value="50"> B. ROI estimé avec des prévisions minimales</label><br>
+            <label><input type="radio" name="q84" value="75"> C. ROI modéré avec une analyse de rentabilité partielle</label><br>
+            <label><input type="radio" name="q84" value="100"> D. ROI complet avec une analyse détaillée et des projections financières</label>
+        </div>
+        <button type="button" onclick="prevSection('Évaluation du projet')">Précédent</button>
+        <button type="button" onclick="nextSection('Définissez vos objectifs et vos besoins')">Suivant</button>
+        </div>
+
+        <div id="Définissez vos objectifs et vos besoins" class="section">
+        <h2>8. Définissez vos objectifs et vos besoins</h2>
+        <h3>a. Objectifs</h3>
+        <div class="question">
+            <p>1. Quels sont les principaux objectifs de la migration vers le cloud pour votre organisation ?</p>
+            <label><input type="radio" name="q85" value="25"> A. Réduction des coûts d'infrastructure</label><br>
+            <label><input type="radio" name="q85" value="50"> B. Amélioration de la scalabilité et de la flexibilité</label><br>
+            <label><input type="radio" name="q85" value="75"> C. Augmentation de la performance et de la disponibilité</label><br>
+            <label><input type="radio" name="q85" value="100"> D. Renforcement de la collaboration et de l'innovation</label>
+        </div>
+        <div class="question">
+            <p>2. Quels aspects spécifiques de l'opération ou du service souhaitez-vous améliorer avec la migration vers le cloud ?</p>
+            <label><input type="radio" name="q86" value="25"> A. Temps de réponse et performance des applications</label><br>
+            <label><input type="radio" name="q86" value="50"> B. Sécurité et conformité des données</label><br>
+            <label><input type="radio" name="q86" value="75"> C. Gestion et automatisation des processus IT</label><br>
+            <label><input type="radio" name="q86" value="100"> D. Accessibilité et collaboration entre les équipes</label>
+        </div>
+        <div class="question">
+            <p>3. Quel est le niveau de priorité de la migration vers le cloud par rapport aux autres projets stratégiques de l'organisation ?</p>
+            <label><input type="radio" name="q87" value="25"> A. Faible priorité</label><br>
+            <label><input type="radio" name="q87" value="50"> B. Priorité modérée</label><br>
+            <label><input type="radio" name="q87" value="75"> C. Haute priorité</label><br>
+            <label><input type="radio" name="q87" value="100"> D. Priorité stratégique maximale</label>
+        </div>
+        <div class="question">
+            <p>4. Quels sont les résultats attendus après la migration vers le cloud ?</p>
+            <label><input type="radio" name="q88" value="25"> A. Aucun résultat spécifique attendu</label><br>
+            <label><input type="radio" name="q88" value="50"> B. Résultats limités avec des améliorations marginales</label><br>
+            <label><input type="radio" name="q88" value="75"> C. Résultats modérés avec des gains notables</label><br>
+            <label><input type="radio" name="q88" value="100"> D. Résultats significatifs avec des améliorations majeures et mesurables</label>
+        </div>
+
+        <h3>b. KPIs et SLAs</h3>
+        <div class="question">
+            <p>1. Quels indicateurs clés de performance (KPIs) seront utilisés pour mesurer le succès de la migration vers le cloud ?</p>
+            <label><input type="radio" name="q89" value="25"> A. Aucun KPI défini</label><br>
+            <label><input type="radio" name="q89" value="50"> B. KPIs de base (ex : temps de disponibilité)</label><br>
+            <label><input type="radio" name="q89" value="75"> C. KPIs modérés (ex : temps de réponse, coût opérationnel)</label><br>
+            <label><input type="radio" name="q89" value="100"> D. KPIs détaillés (ex : performance globale, coût total de possession, satisfaction des utilisateurs)</label>
+        </div>
+        <div class="question">
+            <p>2. Quels niveaux de service (SLAs) seront établis avec le fournisseur de cloud ?</p>
+            <label><input type="radio" name="q90" value="25"> A. Aucun SLA défini</label><br>
+            <label><input type="radio" name="q90" value="50"> B. SLAs de base (ex : disponibilité de base)</label><br>
+            <label><input type="radio" name="q90" value="75"> C. SLAs modérés (ex : disponibilité, temps de réponse)</label><br>
+            <label><input type="radio" name="q90" value="100"> D. SLAs détaillés avec des engagements de performance, de support et de récupération</label>
+        </div>
+        <div class="question">
+            <p>3. Comment la performance du cloud sera-t-elle mesurée par rapport aux objectifs définis ?</p>
+            <label><input type="radio" name="q91" value="25"> A. Mesure non définie</label><br>
+            <label><input type="radio" name="q91" value="50"> B. Mesure limitée avec des outils de base</label><br>
+            <label><input type="radio" name="q91" value="75"> C. Mesure modérée avec des outils d'analyse spécifiques</label><br>
+            <label><input type="radio" name="q91" value="100"> D. Mesure complète avec des outils avancés et des rapports réguliers</label>
+        </div>
+        <div class="question">
+            <p>4. Quels mécanismes seront mis en place pour surveiller et garantir le respect des SLAs ?</p>
+            <label><input type="radio" name="q92" value="25"> A. Aucun mécanisme en place</label><br>
+            <label><input type="radio" name="q92" value="50"> B. Mécanismes de surveillance de base</label><br>
+            <label><input type="radio" name="q92" value="75"> C. Mécanismes de surveillance modérés avec des alertes et des rapports</label><br>
+            <label><input type="radio" name="q92" value="100"> D. Mécanismes de surveillance avancés avec des outils de gestion, des alertes proactives et des revues de performance régulières</label>
+        </div>
+        <button type="button" onclick="prevSection('Licences et implications financières')">Précédent</button>
+        <button type="button" onclick="calculateScore()">Voir le score final </button>    
+        <button type="button" onclick="calculateSectionScores()">Plus de détails</button>
+        <button type="button" onclick="downloadResponses()">Télécharger les réponses</button>
+        
+
+
+        </div>
+
+
+        </form>
+                    
+        <div id="result"></div>
+        
+
+    </div>
+        <script src="form.js"></script>
+        <script src="scores.js"></script>
+        
+
+
+        <script>
+          function downloadResponses() {
+    const form = document.getElementById('percentageForm');
+    const formData = new FormData(form);
+    const responses = [];
+
+    // Parcourir chaque élément du formulaire
+    for (const [name, value] of formData.entries()) {
+        // Trouver l'élément input correspondant à la réponse sélectionnée
+        const inputElement = document.querySelector(`input[name="${name}"]:checked`);
+        if (inputElement && !isNaN(inputElement.value)) {
+            const labelElement = inputElement.parentElement;
+
+            // Trouver l'élément contenant le texte de la question
+            let questionElement = labelElement;
+            while (questionElement && !questionElement.classList.contains('question') && !questionElement.dataset.question) {
+                questionElement = questionElement.parentElement;
+            }
+
+            // Si un élément contenant la question a été trouvé, extraire le texte
+            if (questionElement) {
+                const questionText = questionElement.textContent.trim();
+                // Ajout de "réponse" à côté de la valeur
+                responses.push(`${questionText}: ${inputElement.value} (réponse)`);
+            } else {
+                console.error(`Impossible de trouver la question pour l'élément ${name}`);
+            }
+        }
+    }
+
+    // Créer le fichier à télécharger
+    const blob = new Blob([responses.join('\n')], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'responses.txt';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
+            </script>
+            
+            
+
+
+        
+</body>
+</html>
