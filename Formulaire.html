@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'Évaluation</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="icon" href="add-removebg-preview.png" sizes="64x64"type="image/x-icon">
+    <style>
+        .section {
+            display: none;
+            margin-bottom: 50px;
+        }
+        .section.active {
+            display: block;
+        }
+    </style>
+    <style>
+        .result-percentage {
+          color: green;
+          font-weight: bold;
+        }
+        h1 {
+            color: green;
+        }
+        h2 {
+            color: rgb(209, 98, 13);
+        }
+      </style>
+      
+</head>
+<body>
+    <div class="container">
+        <form id="percentageForm">
+            <h1>Le Formulaire Prendra Environ 20 mins</h1>
+            <div id="Architecture Technique 1" class="section active">
+            <h2>1. Architecture Technique </h2> 
+            <h3>a. Technologie de Stack d'Application Non Supportée:</h3> 
+            <div class="question">
+                <p>1. La stack technologique actuelle de votre application est-elle entièrement supportée dans votre environnement cloud cible ?</p>
+                <label><input type="radio" name="q1" value="0">A. Oui, entièrement supportée  </label><br>
+                <label><input type="radio" name="q1" value="50">B. Partiellement supportée avec quelques interventions manuelles</label><br>
+                <label><input type="radio" name="q1" value="100">C. Non supportée mais des solutions de contournement sont disponibles</label><br>
+                
+            </div>
+            <div class="question">
+                <p>2. Quelle est la criticité de la stack technologique non supportée pour la fonctionnalité de votre application ?</p>
+                <label><input type="radio" name="q2" value="0">A.Pas critique ; elle peut être facilement remplacée</label><br>
+                <label><input type="radio" name="q2" value="50">B.Quelque peu critique ; le remplacement nécessitera des modifications modérées</label><br>
+                <label><input type="radio" name="q2" value="100">C.Critique ; des changements importants sont nécessaires</label><br>
+                
+            </div>
+            <div class="question">
+                <p>3.Quel est l'effort estimé pour refactorer la stack technologique non supportée pour la compatibilité avec le cloud ?</p>
+                <label><input type="radio" name="q3" value="0">A.	Moins d'un mois </label><br>
+                <label><input type="radio" name="q3" value="50">B.	1 à 3 mois  </label><br>
+                <label><input type="radio" name="q3" value="100">C.	3 à 6 mois   </label><br>
+                
+            </div>
+            <div class="question">
+                <p>4. Existe-t-il des alternatives commerciales ou open-source disponibles dans le cloud qui pourraient remplacer la technologie non supportée ?</p>
+                <label><input type="radio" name="q4" value="0">A. Oui, plusieurs alternatives disponibles</label><br>
+                <label><input type="radio" name="q4" value="50">B. Oui, mais avec des limitations </label><br>
+                <label><input type="radio" name="q4" value="100">C. Pas d'alternatives directes ; solutions partielles disponibles  </label><br>
+                
+            </div>
+            <div class="question">
+                <p>5. Comment la migration de la stack technologique non supportée affectera-t-elle le coût des ressources cloud ?</p>
+                <label><input type="radio" name="q5" value="0">A. Aucun impact ; les coûts restent les mêmes</label><br>
+                <label><input type="radio" name="q5" value="50">B. Augmentation minimale des coûts</label><br>
+                <label><input type="radio" name="q5" value="100">C. Augmentation modérée des coûts </label><br>
+                
+            </div>
+            <h3>b. Conception et Déploiement Monolithique:</h3>
+            <div class="question">
+                <p>6. Votre application est-elle conçue selon une architecture monolithique ?</p>
+                <label><input type="radio" name="q6" value="0">A. Non, elle est déjà modulaire ou basée sur des microservices </label><br>
+                <label><input type="radio" name="q6" value="50">B. Partiellement monolithique, avec certains composants modulaires  </label><br>
+                <label><input type="radio" name="q6" value="100">C. Entièrement monolithique, mais des plans de refactorisation sont en place </label><br>
+               
+            </div>
+            <div class="question">
+                <p>7.Quelle est la complexité de décomposer l'application monolithique en microservices ?</p>
+                <label><input type="radio" name="q8" value="0">A.Faible ; modifications minimales requises </label><br>
+                <label><input type="radio" name="q8" value="50">B. Modérée ; nécessite quelques retouches  </label><br>
+                <label><input type="radio" name="q8" value="100">C. Élevée ; rework significatif nécessaire </label><br>
+                
+            </div>
+            <div class="question">
+                <p>8. Quel est l'impact de la conception monolithique sur le scalabilité de l'application dans le cloud ?</p>
+                <label><input type="radio" name="q9" value="0">A. Impact minimal ; le scaling est simple</label><br>
+                <label><input type="radio" name="q9" value="50">B. Impact modéré ; solutions additionnelles requises  </label><br>
+                <label><input type="radio" name="q9" value="100">C. Impact significatif ; stratégies de scaling complexes nécessaires   </label><br>
+                
+            </div>
+            <div class="question">
+                <p>9. Comment la conception monolithique affecte-t-elle la fréquence de déploiement et l'agilité dans l'environnement cloud ?</p>
+                <label><input type="radio" name="q10" value="0">A.Aucun impact ; le déploiement reste le même </label><br>
+                <label><input type="radio" name="q10" value="50">B. Légère réduction de l'agilité </label><br>
+                <label><input type="radio" name="q10" value="100">C. Réduction significative de l'agilité </label><br>
+                
+            </div>
+            <div class="question">
+                <p>10.Comment l'architecture monolithique affecte-t-elle l'utilisation des ressources cloud et les coûts ?</p>
+                <label><input type="radio" name="q11" value="0">A.Efficace ; utilisation optimale des ressources</label><br>
+                <label><input type="radio" name="q11" value="50">B.Légèrement inefficace ; un peu de gaspillage de ressources </label><br>
+                <label><input type="radio" name="q11" value="100">C.Inefficace ; gaspillage substantiel de ressources</label><br>  
+            </div>
+            <h3>c. Points de Défaillance Unique:</h3>
+            <div class="question">
+                <p>11.Existe-t-il des points de défaillance unique dans l'architecture de votre application ?</p>
+                <label><input type="radio" name="q12" value="0">A.Non ; des mécanismes de redondance sont en place</label><br>
+                <label><input type="radio" name="q12" value="50">B.Quelques-uns ; points de défaillance unique limités avec des plans de contingence</label><br>
+                <label><input type="radio" name="q12" value="100">C.Certains ; points de défaillance unique identifiés sans redondance complète</label><br>
+                
+            </div>
+            <div class="question">
+                <p>12.Quel impact la présence de points de défaillance unique aura-t-elle sur la fiabilité de l'application dans le cloud ?</p>
+                <label><input type="radio" name="q13" value="0">A.Impact minimal ; fiabilité reste élevée</label><br>
+                <label><input type="radio" name="q13" value="50">B.Impact modéré ; mesures supplémentaires requises</label><br>
+                <label><input type="radio" name="q13" value="100">C.Impact significatif ; fiabilité compromise</label><br>
+                
+            </div>
+            <div class="question">
+                <p>13.Quel est l'effort estimé pour traiter les points de défaillance unique dans votre architecture actuelle ?</p>
+                <label><input type="radio" name="q14" value="0">A.Moins d'un mois</label><br>
+                <label><input type="radio" name="q14" value="50">B.1 à 3 mois</label><br>
+                <label><input type="radio" name="q14" value="100">C.3 à 6 mois</label><br>
+                
+            </div>
+            <div class="question">
+                <p>14.Quelles mesures sont actuellement en place pour atténuer les points de défaillance unique ?</p>
+                <label><input type="radio" name="q15" value="0">A.Mesures complètes et redondance</label><br>
+                <label><input type="radio" name="q15" value="50">B.Mesures partielles ; un peu de redondance</label><br>
+                <label><input type="radio" name="q15" value="100">C.Mesures de base ; redondance limitée</label><br>
+                
+            </div>
+            <div class="question">
+                <p>15.Comment les points de défaillance unique impactent-ils le plan de récupération après sinistre dans un environnement cloud ?</p>
+                <label><input type="radio" name="q16" value="0">A.Aucun impact ; récupération après sinistre bien planifiée</label><br>
+                <label><input type="radio" name="q16" value="50">B.Impact minimal ; quelques ajustements nécessaires</label><br>
+                <label><input type="radio" name="q16" value="100">C.Impact significatif ; changements étendus requis</label><br>
+            </div>
+            <h3>d. Goulots d'Étranglement:</h3>
+            <div class="question">
+                <p>16.Existe-t-il des goulots d'étranglement de performance connus dans l'architecture de votre application ?</p>
+                <label><input type="radio" name="q17" value="0">A.Non ; performance optimale</label><br>
+                <label><input type="radio" name="q17" value="50">B.Quelques-uns ; goulots d'étranglement mineurs avec solutions identifiées</label><br>
+                <label><input type="radio" name="q17" value="100">C.Certains ; goulots d'étranglement modérés avec solutions partielles</label><br>
+                
+            </div>
+            <div class="question">
+                <p>17.Comment la migration vers le cloud impactera-t-elle les goulots d'étranglement de performance existants ?</p>
+                <label><input type="radio" name="q18" value="0">A.Amélioration ; les ressources cloud atténuent les goulots d'étranglement</label><br>
+                <label><input type="radio" name="q18" value="50">B.Neutre ; les goulots d'étranglement restent inchangés</label><br>
+                <label><input type="radio" name="q18" value="100">C.Aggravation ; la migration cloud peut exacerber les goulots d'étranglement</label><br>
+                
+            </div>
+            <div class="question">
+                <p>18.Quel est l'effort estimé pour identifier et résoudre les goulots d'étranglement dans l'application avant la migration ?</p>
+                <label><input type="radio" name="q19" value="0">A.Moins d'un mois</label><br>
+                <label><input type="radio" name="q19" value="50">B.1 à 3 mois</label><br>
+                <label><input type="radio" name="q19" value="100">C.3 à 6 mois</label><br>
+                
+            </div>
+            <div class="question">
+                <p>19.Comment les goulots d'étranglement identifiés affectent-ils les métriques de performance de l'application (par exemple, temps de réponse, débit) ?</p>
+                <label><input type="radio" name="q20" value="0">A.Aucun effet ; les métriques sont dans la plage acceptable</label><br>
+                <label><input type="radio" name="q20" value="50">B.Effet mineur ; légère dégradation des métriques</label><br>
+                <label><input type="radio" name="q20" value="100">C.Effet modéré ; dégradation notable des métriques</label><br>
+                
+            </div>
+            <div class="question">
+                <p>20.Quels outils ou pratiques sont en place pour surveiller et gérer les goulots d'étranglement de performance ?</p>
+                <label><input type="radio" name="q21" value="0">A.Outils avancés et pratiques efficaces</label><br>
+                <label><input type="radio" name="q21" value="50">B.Outils de base avec quelques pratiques</label><br>
+                <label><input type="radio" name="q21" value="100">C.Outils limités et pratiques</label><br>
+                
+            </div>
+            <h3>e. Dépendances Cycliques:</h3>
+            <div class="question">
+                <p>21.Existe-t-il des dépendances cycliques dans l'architecture de votre application ?</p>
+                <label><input type="radio" name="q22" value="0">A.Non ; les dépendances sont bien gérées</label><br>
+                <label><input type="radio" name="q22" value="50">B.Quelques-unes ; dépendances cycliques mineures avec solutions de contournement</label><br>
+                <label><input type="radio" name="q22" value="100">C.Certaines ; dépendances cycliques modérées nécessitant une résolution</label><br>
+                
+            </div>
+            <div class="question">
+                <p>22.Comment les dépendances cycliques affectent-elles la maintenabilité et la scalabilité de votre application dans le cloud ?</p>
+                <label><input type="radio" name="q23" value="0">A.Aucun effet ; la maintenabilité et la scalabilité sont intactes</label><br>
+                <label><input type="radio" name="q23" value="50">B.Effet mineur ; quelques ajustements nécessaires</label><br>
+                <label><input type="radio" name="q23" value="100">C.Effet modéré ; impacts sur la maintenabilité et la scalabilité</label><br>
+                
+            </div>
+            <div class="question">
+                <p>23.Quel est l'effort estimé pour résoudre les dépendances cycliques avant la migration ?</p>
+                <label><input type="radio" name="q24" value="0">A.Moins d'un mois</label><br>
+                <label><input type="radio" name="q24" value="50">B.1 à 3 mois</label><br>
+                <label><input type="radio" name="q24" value="100">C.3 à 6 mois</label><br>
+                
+            </div>
+            <div class="question">
+                <p>24.Comment les dépendances cycliques impactent-elles le processus de déploiement dans un environnement cloud ?</p>
+                <label><input type="radio" name="q25" value="0">A.Aucun impact ; le déploiement est simple</label><br>
+                <label><input type="radio" name="q25" value="50">B.Impact mineur ; complexité supplémentaire</label><br>
+                <label><input type="radio" name="q25" value="100">C.Impact modéré ; complexité accrue dans le déploiement</label><br>
+                
+            </div>
+            <div class="question">
+                <p>25. Quels outils ou stratégies sont en place pour gérer et atténuer les dépendances cycliques </p>
+                <label><input type="radio" name="q26" value="0">A.Outils avancés et stratégies efficaces</label><br>
+                <label><input type="radio" name="q26" value="50">B.Outils de base avec quelques stratégies </label><br>
+                <label><input type="radio" name="q26" value="100">C.Outils limités et stratégies</label><br> 
+            </div>
+            <h3>f. Automatisation des tests et couverture du code insuffisantes:</h3>
+            <div class="question">
+                <p>26.Quel est le niveau actuel d'automatisation des tests dans votre application ?</p>
+                <label><input type="radio" name="q27" value="0">A.Complet ; couverture totale de l'automatisation des tests</label><br>
+                <label><input type="radio" name="q27" value="50">B.Modéré ; portions significatives automatisées</label><br>
+                <label><input type="radio" name="q27" value="100">C.Minimal ; automatisation limitée</label><br>
+                
+            </div>
+            <div class="question">
+                <p>27.Quel est le pourcentage de couverture du code par vos tests automatisés ?</p>
+                <label><input type="radio" name="q28" value="0">A.Au-dessus de 90%</label><br>
+                <label><input type="radio" name="q28" value="50">B.70% à 90%</label><br>
+                <label><input type="radio" name="q28" value="100">C.50% à 70%</label><br>
+                
+            </div>
+            <div class="question">
+                <p>28. Quel serait l'impact d'une automatisation des tests insuffisante sur le processus de migration vers le cloud ?</p>
+                <label><input type="radio" name="q29" value="0">A.Impact minimal ; la migration vers le cloud peut se dérouler sans encombre</label><br>
+                <label><input type="radio" name="q29" value="50">B.Impact modéré ; des tests supplémentaires sont nécessaires</label><br>
+                <label><input type="radio" name="q29" value="100">C.Impact significatif ; des tests approfondis sont nécessaires </label><br>
+                
+            </div>
+            <div class="question">
+                <p>29.Quel est l'effort estimé pour améliorer l'automatisation des tests et la couverture du code avant la migration ?</p>
+                <label><input type="radio" name="q30" value="0">A.Moins d'un mois</label><br>
+                <label><input type="radio" name="q30" value="50">B.1 à 3 mois</label><br>
+                <label><input type="radio" name="q30" value="100">C. 3 à 6 mois </label><br>
+                
+            </div>
+            <div class="question">
+                <p>30. Comment les pratiques de test actuelles affectent-elles la qualité et la fiabilité de l'application dans un environnement cloud ?</p>
+                <label><input type="radio" name="q31" value="0">A. Haute qualité et fiabilité</label><br>
+                <label><input type="radio" name="q31" value="50">B. Qualité modérée ; quelques problèmes de fiabilité </label><br>
+                <label><input type="radio" name="q31" value="100">C. Faible qualité ; problèmes fréquents de fiabilité  </label><br>
+                
+            </div>
+            <button type="button" onclick="nextSection('Gestion du cycle de vie des applications')">Suivant</button>
+        </div>
+        
+
+        <div id="Gestion du cycle de vie des applications" class="section">
+            <h2>2. Gestion du cycle de vie des applications </h2> 
+            <h3>a.  Mises à jour de configuration manuelles</h3> 
+            <div class="question">
+                <p>1. Quelle est la fréquence des mises à jour manuelles de configuration dans votre application ?</p>
+                <label><input type="radio" name="q32" value="0">A. Très fréquente ; mises à jour continues</label><br>
+                <label><input type="radio" name="q32" value="50">B. Fréquente ; mises à jour régulières</label><br>
+                <label><input type="radio" name="q32" value="100">C. Peu fréquente ; mises à jour occasionnelles</label><br>
+                
+            </div>
+            <div class="question">
+                <p>2. Quel est l'effort estimé pour automatiser les mises à jour de configuration avant la migration ?</p>
+                <label><input type="radio" name="q33" value="0">A.Moins d'un mois</label><br>
+                <label><input type="radio" name="q33" value="50">B.1 à 3 mois</label><br>
+                <label><input type="radio" name="q33" value="100">C.Plus de 6 mois</label><br>
+                
+            </div>
+            <div class="question">
+                <p>3.Quel impact les mises à jour manuelles de configuration ont-elles sur la cohérence et la stabilité de l'application dans un environnement cloud ?</p>
+                <label><input type="radio" name="q34" value="0">A.Aucun impact ; cohérence et stabilité maintenues </label><br>
+                <label><input type="radio" name="q34" value="50">B.	Impact mineur ; nécessite des ajustements</label><br>
+                <label><input type="radio" name="q34" value="100">C.Impact modéré ; risques de incohérences</label><br>
+                
+            </div>
+            <div class="question">
+                <p>4. Quel est le niveau de documentation des procédures de mise à jour manuelle de configuration ?</p>
+                <label><input type="radio" name="q35" value="0">A. Documentation complète et détaillée</label><br>
+                <label><input type="radio" name="q35" value="50">B.Documentation partielle avec certains détails manquants</label><br>
+                <label><input type="radio" name="q35" value="100">C. Documentation minimale ; informations limitées</label><br>
+                
+            </div>
+            <div class="question">
+                <p>5. Quelle est la complexité de la gestion des mises à jour de configuration manuelles dans un environnement multi-cloud ?</p>
+                <label><input type="radio" name="q36" value="0">A.Faible ; gestion simple et directe</label><br>
+                <label><input type="radio" name="q36" value="50">B. Modérée ; gestion nécessitant quelques ajustements</label><br>
+                <label><input type="radio" name="q36" value="100">C. Très élevée ; gestion très complexe et difficile</label><br>
+                
+            </div>
+            <h3>b.  Construction et Déploiements Manuels :</h3>
+            <div class="question">
+                <p>6.À quelle fréquence réalisez-vous des constructions et des déploiements manuels dans votre application ?</p>
+                <label><input type="radio" name="q37" value="0">A. Très fréquente ; constructions et déploiements continus</label><br>
+                <label><input type="radio" name="q37" value="50">B. Fréquente ; constructions et déploiements réguliers</label><br>
+                <label><input type="radio" name="q37" value="100">C. Peu fréquente ; constructions et déploiements occasionnels</label><br>
+               
+            </div>
+            <div class="question">
+                <p>7.Quel est l'effort estimé pour automatiser les processus de construction et de déploiement avant la migration ?</p>
+                <label><input type="radio" name="q38" value="0">A.Moins d'un mois</label><br>
+                <label><input type="radio" name="q38" value="50">B. 1 à 3 mois</label><br>
+                <label><input type="radio" name="q38" value="100">C. Plus de 6 mois </label><br>
+                
+            </div>
+            <div class="question">
+                <p>8. Comment la gestion manuelle des constructions et des déploiements impacte-t-elle l'agilité et la fréquence des mises en production dans un environnement cloud ?</p>
+                <label><input type="radio" name="q39" value="0">A. Aucun impact ; agilité et fréquence inchangées</label><br>
+                <label><input type="radio" name="q39" value="50">B. Impact mineur ; quelques ajustements nécessaires</label><br>
+                <label><input type="radio" name="q39" value="100">C. Impact significatif ; agilité et fréquence gravement réduites</label><br>
+                
+            </div>
+            <div class="question">
+                <p>9. Quel est le niveau de documentation des procédures de construction et de déploiement manuels ?</p>
+                <label><input type="radio" name="q40" value="0">A.Documentation complète et détaillée</label><br>
+                <label><input type="radio" name="q40" value="50">B. Documentation partielle avec certains détails manquants </label><br>
+                <label><input type="radio" name="q40" value="100">C. Documentation minimale ; informations limitées</label><br>
+                
+            </div>
+            <div class="question">
+                <p>10.Quel impact les processus manuels de construction et de déploiement ont-ils sur les coûts de ressources cloud ?</p>
+                <label><input type="radio" name="q41" value="0">A.Aucun impact ; les coûts restent les mêmes</label><br>
+                <label><input type="radio" name="q41" value="50">B.Augmentation minimale des coûts</label><br>
+                <label><input type="radio" name="q41" value="100">C.Augmentation significative des coûts</label><br>  
+            </div>
+            <h3>c. Incapacité à Être Conteneurisé :</h3>
+            <div class="question">
+                <p>11.Votre application peut-elle être conteneurisée sans modifications significatives ?</p>
+                <label><input type="radio" name="q42" value="0">A.Oui, facilement conteneurisable</label><br>
+                <label><input type="radio" name="q42" value="50">B.Oui, mais nécessite quelques modifications</label><br>
+                <label><input type="radio" name="q42" value="100">C.Non, des modifications importantes sont nécessaires</label><br>
+                
+            </div>
+            <div class="question">
+                <p>12. Quel est l'effort estimé pour rendre votre application conteneurisable ?</p>
+                <label><input type="radio" name="q43" value="0">A.Moins d'un mois</label><br>
+                <label><input type="radio" name="q43" value="50">B.1 à 3 mois</label><br>
+                <label><input type="radio" name="q43" value="100">C.Plus de 6 mois</label><br>
+                
+            </div>
+            <div class="question">
+                <p>13.Comment l'incapacité à conteneuriser l'application impacte-t-elle la flexibilité et l'évolutivité dans un environnement cloud ?</p>
+                <label><input type="radio" name="q44" value="0">A.Aucun impact ; flexibilité et évolutivité maintenues</label><br>
+                <label><input type="radio" name="q44" value="50">B.Impact mineur ; flexibilité et évolutivité légèrement réduites</label><br>
+                <label><input type="radio" name="q44" value="100">C.Impact significatif ; flexibilité et évolutivité gravement réduites</label><br>
+                
+            </div>
+            <div class="question">
+                <p>14.Quels ajustements sont nécessaires pour conteneuriser une application non conçue pour les conteneurs ?</p>
+                <label><input type="radio" name="q45" value="0">A.Modifications mineures</label><br>
+                <label><input type="radio" name="q45" value="50">B.Modifications modérées</label><br>
+                <label><input type="radio" name="q45" value="100">C. Modifications majeures</label><br>
+                
+            </div>
+            <div class="question">
+                <p>15.Quel est le niveau de complexité pour déployer une application non conteneurisée dans un environnement cloud ?</p>
+                <label><input type="radio" name="q46" value="0">A.Faible ; déploiement simple</label><br>
+                <label><input type="radio" name="q46" value="50">B.Modéré ; quelques ajustements nécessaires</label><br>
+                <label><input type="radio" name="q46" value="100">C.Très élevé ; déploiement très complexe</label><br>
+                
+            </div>
+            <h3>d. Utilisation Inconsistante du Contrôle de Version :</h3>
+            <div class="question">
+                <p>16.Quel est le niveau de cohérence dans l'utilisation du contrôle de version pour votre application ?</p>
+                <label><input type="radio" name="q47" value="0">A.Entièrement cohérent ; utilisation uniforme</label><br>
+                <label><input type="radio" name="q47" value="50">B.Majoritairement cohérent ; quelques incohérences</label><br>
+                <label><input type="radio" name="q47" value="100">C.Peu ou pas cohérent ; utilisation variable</label><br>
+                
+            </div>
+            <div class="question">
+                <p>17.Quel est l'effort estimé pour standardiser l'utilisation du contrôle de version avant la migration ?</p>
+                <label><input type="radio" name="q48" value="0">A.Moins d'un mois</label><br>
+                <label><input type="radio" name="q48" value="50">B.1 à 3 mois</label><br>
+                <label><input type="radio" name="q48" value="100">C.Plus de 6 mois</label><br>
+                
+            </div>
+            <div class="question">
+                <p>18.Comment les incohérences dans l'utilisation du contrôle de version impactent-elles la qualité et la stabilité de l'application dans un environnement cloud ?</p>
+                <label><input type="radio" name="q49" value="0">A.Aucun impact ; qualité et stabilité maintenues</label><br>
+                <label><input type="radio" name="q49" value="50">B.Impact mineur ; qualité et stabilité légèrement affectées</label><br>
+                <label><input type="radio" name="q49" value="100">C.Impact significatif ; qualité et stabilité gravement affectées</label><br>
+                
+            </div>
+            <div class="question">
+                <p>19.Quel est le niveau de documentation des processus de contrôle de version utilisés dans l'application ?</p>
+                <label><input type="radio" name="q50" value="0">A.Documentation complète et détaillée</label><br>
+                <label><input type="radio" name="q50" value="50">B.Documentation partielle avec certains détails manquants</label><br>
+                <label><input type="radio" name="q50" value="100">C.Documentation minimale ; informations limitées</label><br>
+                
+            </div>
+            <div class="question">
+                <p>20.Comment les incohérences dans l'utilisation du contrôle de version affectent-elles le processus de déploiement dans un environnement cloud ?</p>
+                <label><input type="radio" name="q51" value="0">A.Aucun impact ; déploiement reste fluide</label><br>
+                <label><input type="radio" name="q51" value="50">B.Impact mineur ; quelques ajustements nécessaires</label><br>
+                <label><input type="radio" name="q51" value="100">C.Impact significatif ; processus de déploiement gravement entravé</label><br><br>
+                <button type="button" onclick="prevSection('Architecture Technique 1')">Précedent</button>
+                <button type="button" onclick="nextSection('Complexité et incohérence des applications')">Suivant</button>
+            </div>
+        </div>
+        <div id="Complexité et incohérence des applications" class="section">
+            <h2>3. Complexité et incohérence des applications</h2>
+            <h3>a. Fonctionnalités Métier Complexe</h3>
+            <div class="question">
+                <p>1.Quelle est la complexité des fonctionnalités métier de votre application ?</p>
+                <label><input type="radio" name="q52" value="0">A.Faible ; fonctionnalités simples et bien définies</label><br>
+                <label><input type="radio" name="q52" value="50">B.Modérée ; fonctionnalités avec des interactions limitées</label><br>
+                <label><input type="radio" name="q52" value="100">C.Élevée ; fonctionnalités complexes avec de nombreuses interactions</label><br>
+            </div>
+            <div class="question">
+                <p>2.Quel est l'effort estimé pour simplifier les fonctionnalités métier avant la migration vers le cloud ?</p>
+                <label><input type="radio" name="q53" value="0">A.Moins d'un mois</label><br>
+                <label><input type="radio" name="q53" value="50">B.1 à 3 mois</label><br>
+                <label><input type="radio" name="q53" value="100">C.Plus de 6 mois</label><br>
+                
+            </div>
+            <div class="question">
+                <p>3.Comment la complexité des fonctionnalités métier affecte-t-elle la maintenabilité et l'évolutivité de votre application dans le cloud ?</p>
+                <label><input type="radio" name="q54" value="0">A.Aucun impact ; maintenabilité et évolutivité sont maintenues</label><br>
+                <label><input type="radio" name="q54" value="50">B.Impact mineur ; nécessite quelques ajustements</label><br>
+                <label><input type="radio" name="q54" value="100">C.Impact significatif ; maintenabilité et évolutivité gravement affectées</label><br>
+                
+            </div>
+            <div class="question">
+                <p>4.Quel est le niveau de documentation disponible pour les fonctionnalités métier complexes  ?</p>
+                <label><input type="radio" name="q55" value="0">A.Documentation complète et détaillée</label><br>
+                <label><input type="radio" name="q55" value="50">B.Documentation partielle avec certains détails manquants</label><br>
+                <label><input type="radio" name="q55" value="100">C.Documentation minimale ; informations limitées</label><br>
+                
+            </div>
+            <div class="question">
+                <p>5. Quels outils ou pratiques sont utilisés pour gérer la complexité des fonctionnalités métier ?</p>
+                <label><input type="radio" name="q56" value="0">A.Outils avancés et pratiques efficaces</label><br>
+                <label><input type="radio" name="q56" value="50">B.Outils de base avec quelques pratiques </label><br>
+                <label><input type="radio" name="q56" value="100">C.Outils limités et pratiques</label><br> 
+            </div>
+            <h3>b. Modèle de Données :</h3>
+            <div class="question">
+                <p>6.Quel est le niveau de complexité du modèle de données de votre application ?</p>
+                <label><input type="radio" name="q57" value="0">A.Faible ; modèle de données simple et bien structuré</label><br>
+                <label><input type="radio" name="q57" value="50">B.Modéré ; modèle de données avec quelques relations complexes</label><br>
+                <label><input type="radio" name="q57" value="100">C.Élevé ; modèle de données avec de nombreuses relations et redondances</label><br>
+                
+            </div>
+            <div class="question">
+                <p>7.Quel est l'effort estimé pour simplifier ou refactorer le modèle de données avant la migration vers le cloud ?</p>
+                <label><input type="radio" name="q58" value="0">A.Moins d'un mois</label><br>
+                <label><input type="radio" name="q58" value="50">B.1 à 3 mois</label><br>
+                <label><input type="radio" name="q58" value="100">C.Plus de 6 mois</label><br>
+                
+            </div>
+            <div class="question">
+                <p>8. Comment un modèle de données gonflé affecte-t-il les performances de l'application dans un environnement cloud ?</p>
+                <label><input type="radio" name="q59" value="0">A.Aucun impact ; performances optimales</label><br>
+                <label><input type="radio" name="q59" value="50">B.Impact mineur ; légère dégradation des performances</label><br>
+                <label><input type="radio" name="q59" value="100">C.Impact significatif ; dégradation sévère des performances</label><br>
+                
+            </div>
+            <div class="question">
+                <p>9.Quel est le niveau de documentation disponible pour le modèle de données complexe ?</p>
+                <label><input type="radio" name="q60" value="0">A.Documentation complète et détaillée</label><br>
+                <label><input type="radio" name="q60" value="50">B.Documentation partielle avec certains détails manquants</label><br>
+                <label><input type="radio" name="q60" value="100">C.Documentation minimale ; informations limitées</label><br>
+                
+            </div>
+            <div class="question">
+                <p>10.Quels outils ou pratiques sont utilisés pour gérer et optimiser le modèle de données ?</p>
+                <label><input type="radio" name="q61" value="0">A.Outils avancés et pratiques efficaces</label><br>
+                <label><input type="radio" name="q61" value="50">B. Outils de base avec quelques pratiques</label><br>
+                <label><input type="radio" name="q61" value="100">C. Outils limités et pratiques </label><br><br>
+                <button type="button" onclick="prevSection('Gestion du cycle de vie des applications')">Précedent</button>
+                <button type="button" onclick="nextSection('Points de consolidation')">Suivant</button>
+            </div>
+        </div>
+        <div id="Points de consolidation" class="section">
+            <h2>4. Points de consolidation </h2>
+            <h3>a. Interactions excessives : </h3>
+            <div class="question">
+                <p>1.Quelle est la fréquence des interactions entre les composants de votre application ?</p>
+                <label><input type="radio" name="q62" value="0">A.Faible ; interactions minimales</label><br>
+                <label><input type="radio" name="q62" value="50">B. Modérée ; interactions régulières</label><br>
+                <label><input type="radio" name="q62" value="100">C. Très élevée ; interactions constantes</label><br>
+            </div>
+            <div class="question">
+                <p>2.Quel est l'impact des interactions excessives sur la performance de l'application dans un environnement cloud ?</p>
+                <label><input type="radio" name="q63" value="0">A.Aucun impact ; performance maintenue</label><br>
+                <label><input type="radio" name="q63" value="50">B. Impact mineur ; légère dégradation des performances</label><br>
+                <label><input type="radio" name="q63" value="100">C. Impact significatif ; dégradation sévère des performances</label><br>
+            </div>
+            <div class="question">
+                <p>3.Quels outils ou pratiques sont utilisés pour gérer les interactions excessives entre les composants ?</p>
+                <label><input type="radio" name="q64" value="0">A.Outils avancés et pratiques efficaces</label><br>
+                <label><input type="radio" name="q64" value="50">B. Outils de base avec quelques pratiques</label><br>
+                <label><input type="radio" name="q64" value="100">C. Outils limités et pratiques</label><br>
+            </div>
+            <div class="question">
+                <p>4.Quelle est la fréquence des problèmes de latence causés par des interactions excessives dans l'application ?</p>
+                <label><input type="radio" name="q65" value="0">A.Rare ; problèmes occasionnels</label><br>
+                <label><input type="radio" name="q65" value="50">B. Fréquent ; problèmes réguliers</label><br>
+                <label><input type="radio" name="q65" value="100">C. Très fréquent ; problèmes constants</label><br>
+            </div>
+            <div class="question">
+                <p>5.Quel est l'effort estimé pour optimiser ou réduire les interactions excessives avant la migration vers le cloud ?</p>
+                <label><input type="radio" name="q66" value="0">A.Moins d'un mois</label><br>
+                <label><input type="radio" name="q66" value="50">B. 1 à 3 mois</label><br>
+                <label><input type="radio" name="q66" value="100">C. Plus de 6 mois</label><br>
+            </div>
+            <h3>b. Appels Réseau :</h3>
+            <div class="question">
+                <p>6.Quel est le volume des appels réseau effectués par votre application ?</p>
+                <label><input type="radio" name="q67" value="0">A.Faible ; appels réseau minimaux</label><br>
+                <label><input type="radio" name="q67" value="50">B. Modéré ; appels réseau réguliers</label><br>
+                <label><input type="radio" name="q67" value="100">C. Élevé ; nombreux appels réseau</label><br>
+            </div>
+            <div class="question">
+                <p>7. Quel est l'impact des appels réseau sur les performances de l'application dans un environnement cloud ?</p>
+                <label><input type="radio" name="q68" value="0">A.Aucun impact ; performances optimales</label><br>
+                <label><input type="radio" name="q68" value="50">B. Impact mineur ; légère dégradation des performances</label><br>
+                <label><input type="radio" name="q68" value="100">C.Impact significatif ; dégradation sévère des performances</label><br>
+            </div>
+            <div class="question">
+                <p>8.Quel est le niveau de gestion des appels réseau dans votre application ?</p>
+                <label><input type="radio" name="q69" value="0">A.Gestion avancée avec optimisation</label><br>
+                <label><input type="radio" name="q69" value="50">B. Gestion de base avec quelques optimisations</label><br>
+                <label><input type="radio" name="q69" value="100">C.Gestion limitée avec peu d'optimisations</label><br>
+            </div>
+            <div class="question">
+                <p>9.Quelle est la fréquence des erreurs ou des latences dues aux appels réseau ?</p>
+                <label><input type="radio" name="q70" value="0">A.Rare ; erreurs occasionnelles</label><br>
+                <label><input type="radio" name="q70" value="50">B. Fréquent ; erreurs régulières</label><br>
+                <label><input type="radio" name="q70" value="100">C.Très fréquent ; erreurs constantes</label><br>
+            </div>
+            <div class="question">
+                <p>10. Quel est l'effort estimé pour optimiser les appels réseau avant la migration vers le cloud </p>
+                <label><input type="radio" name="q71" value="0">A.Moins d'un mois</label><br>
+                <label><input type="radio" name="q71" value="50">B. 1 à 3 mois</label><br>
+                <label><input type="radio" name="q71" value="100">C.Plus de 6 mois</label><br>
+            </div>
+            <h3>c. Graphe d'Appels Complexe :</h3>
+            <div class="question">
+                <p>11. Quel est le niveau de complexité du graphe d'appels dans votre application ?</p>
+                <label><input type="radio" name="q72" value="0">A.Faible ; graphe simple avec peu de dépendances</label><br>
+                <label><input type="radio" name="q72" value="50">B. Modéré ; graphe avec quelques dépendances complexes</label><br>
+                <label><input type="radio" name="q72" value="100">C.Élevé ; graphe complexe avec de nombreuses dépendances</label><br>
+            </div>
+            <div class="question">
+                <p>12. Quel est l'impact de la complexité du graphe d'appels sur la maintenabilité de l'application dans le cloud ?</p>
+                <label><input type="radio" name="q73" value="0">A.Aucun impact ; maintenabilité maintenue</label><br>
+                <label><input type="radio" name="q73" value="50">B. Impact mineur ; maintenabilité légèrement affectée</label><br>
+                <label><input type="radio" name="q73" value="100">C.Impact significatif ; maintenabilité gravement affectée</label><br>
+            </div>
+            <div class="question">
+                <p>13. Quel est l'effort estimé pour simplifier le graphe d'appels avant la migration vers le cloud ?</p>
+                <label><input type="radio" name="q74" value="0">A.Moins d'un mois</label><br>
+                <label><input type="radio" name="q74" value="50">B. 1 à 3 mois</label><br>
+                <label><input type="radio" name="q74" value="100">C.Plus de 6 mois</label><br>
+            </div>
+            <div class="question">
+                <p>14. Quel est le niveau de documentation disponible pour le graphe d'appels complexe ?</p>
+                <label><input type="radio" name="q75" value="0">A.Documentation complète et détaillée</label><br>
+                <label><input type="radio" name="q75" value="50">B. Documentation partielle avec certains détails manquants</label><br>
+                <label><input type="radio" name="q75" value="100">C.Documentation minimale ; informations limitées</label><br>
+            </div>
+            <div class="question">
+                <p>15.Quels outils ou pratiques sont utilisés pour gérer la complexité du graphe d'appels ?</p>
+                <label><input type="radio" name="q76" value="0">A.Outils avancés et pratiques efficaces</label><br>
+                <label><input type="radio" name="q76" value="50">B. Outils de base avec quelques pratiques</label><br>
+                <label><input type="radio" name="q76" value="100">C.Outils limités et pratiques</label><br>
+            </div>
+            <h3>d. Utilisation de Bibliothèques et d'APIs Tierces :</h3>
+            <div class="question">
+                <p>16.Quelle est la quantité de bibliothèques et d'APIs tierces utilisées dans votre application ?</p>
+                <label><input type="radio" name="q77" value="0">A.Faible ; utilisation minimale</label><br>
+                <label><input type="radio" name="q77" value="50">B. Modérée ; utilisation régulière</label><br>
+                <label><input type="radio" name="q77" value="100">C.Élevée ; utilisation fréquente</label><br>
+            </div>
+            <div class="question">
+                <p>17.Quel est le niveau de support et de mise à jour des bibliothèques et APIs tierces utilisées ?</p>
+                <label><input type="radio" name="q78" value="0">A.Support et mises à jour réguliers</label><br>
+                <label><input type="radio" name="q78" value="50">B. Support occasionnel avec mises à jour périodiques</label><br>
+                <label><input type="radio" name="q78" value="100">C.Support limité avec mises à jour peu fréquentes</label><br>
+            </div>
+            <div class="question">
+                <p>18.Comment l'utilisation des bibliothèques et APIs tierces impacte-t-elle la sécurité de votre application dans un environnement cloud ?</p>
+                <label><input type="radio" name="q79" value="0">A.Aucun impact ; sécurité maintenue</label><br>
+                <label><input type="radio" name="q79" value="50">B. Impact mineur ; risques légèrement accrus</label><br>
+                <label><input type="radio" name="q79" value="100">C.Impact significatif ; sécurité gravement affectée</label><br>
+            </div>
+            <div class="question">
+                <p>19. Quel est l'effort estimé pour évaluer et sécuriser les bibliothèques et APIs tierces avant la migration vers le cloud ?</p>
+                <label><input type="radio" name="q80" value="0">A.Moins d'un mois</label><br>
+                <label><input type="radio" name="q80" value="50">B. 1 à 3 mois</label><br>
+                <label><input type="radio" name="q80" value="100">C.Plus de 6 mois</label><br>
+            </div>
+            <div class="question">
+                <p>20. Quel est le niveau de documentation et de gestion des intégrations avec les bibliothèques et APIs tierces ?</p>
+                <label><input type="radio" name="q81" value="0">A.Documentation complète et gestion efficace</label><br>
+                <label><input type="radio" name="q81" value="50">B.Documentation partielle avec gestion adéquate</label><br>
+                <label><input type="radio" name="q81" value="100">C.Documentation minimale avec gestion limitée</label><br><br>
+                <button type="button" onclick="prevSection('Complexité et incohérence des applications')">Précédent</button>
+                <button type="button" onclick="nextSection('Durabilité des données')">Suivant</button> 
+            </div>
+            </div>
+            <div id="Durabilité des données" class="section"> 
+            <h2>5. Durabilité des données :</h2>
+            <h3>a. Utilisation des Engagements Multiphases : </h3>
+            <div class="question">
+                <p>1. Quelle est la fréquence des engagements multiphases utilisés dans votre application ?</p>
+                <label><input type="radio" name="q82" value="0">A.Faible ; engagements rares</label><br>
+                <label><input type="radio" name="q82" value="50">B.Modérée ; engagements occasionnels</label><br>
+                <label><input type="radio" name="q82" value="100">C.Élevée ; engagements fréquents</label><br>
+            </div>
+            <div class="question">
+                <p>2. Quel est l'impact des engagements multiphases sur la performance et la fiabilité de votre application dans le cloud ?</p>
+                <label><input type="radio" name="q83" value="0">A.Aucun impact ; performance et fiabilité maintenues</label><br>
+                <label><input type="radio" name="q83" value="50">B.Impact mineur ; légère dégradation de la performance ou fiabilité</label><br>
+                <label><input type="radio" name="q83" value="100">C.Impact significatif ; dégradation sévère des performances ou fiabilité</label><br>
+            </div>
+            <div class="question">
+                <p>3. Quels outils ou pratiques sont utilisés pour gérer les engagements multiphases ?</p>
+                <label><input type="radio" name="q84" value="0">A.Outils avancés et pratiques efficaces</label><br>
+                <label><input type="radio" name="q84" value="50">B.Outils de base avec quelques pratiques</label><br>
+                <label><input type="radio" name="q84" value="100">C.Outils limités et pratiques</label><br>
+            </div>
+            <div class="question">
+                <p>4. Quel est le niveau de documentation et de gestion des engagements multiphases dans votre application ?</p>
+                <label><input type="radio" name="q85" value="0">A.Documentation complète et gestion efficace</label><br>
+                <label><input type="radio" name="q85" value="50">B.Documentation partielle avec gestion adéquate</label><br>
+                <label><input type="radio" name="q85" value="100">C.Documentation minimale avec gestion limitée</label><br>
+            </div>
+            <div class="question">
+                <p>5. Quel est l'effort estimé pour optimiser ou refactorer les engagements multiphases avant la migration vers le cloud ?</p>
+                <label><input type="radio" name="q86" value="0">A.Moins d'un mois</label><br>
+                <label><input type="radio" name="q86" value="50">B.1 à 3 mois</label><br>
+                <label><input type="radio" name="q86" value="100">C.Plus de 6 mois</label><br>
+            </div>
+            <h3>b. Base de Données Monolithique :</h3>
+            <div class="question">
+                <p>6. Quelle est la taille et la complexité de votre base de données monolithique ?</p>
+                <label><input type="radio" name="q87" value="0">A.Modérée ; base de données avec quelques tables complexes</label><br>
+                <label><input type="radio" name="q87" value="50">B.Grande ; base de données avec de nombreuses tables et relations</label><br>
+                <label><input type="radio" name="q87" value="100">C.Très grande ; base de données extrêmement complexe avec de multiples dépendance</label><br>
+            </div>
+            <div class="question">
+                <p>7. Quel est l'impact de la base de données monolithique sur la performance et la scalabilité de l'application dans le cloud ?</p>
+                <label><input type="radio" name="q88" value="0">A.Aucun impact ; performance et scalabilité maintenues</label><br>
+                <label><input type="radio" name="q88" value="50">B.Impact mineur ; légère dégradation de la performance ou scalabilité</label><br>
+                <label><input type="radio" name="q88" value="100">C.Impact significatif ; dégradation sévère des performances ou scalabilité</label><br>
+            </div>
+            <div class="question">
+                <p>8. Quel est le niveau de difficulté pour diviser la base de données monolithique en services ou bases de données plus petites avant la migration ?</p>
+                <label><input type="radio" name="q89" value="0">A.Faible ; tâche simple à accomplir</label><br>
+                <label><input type="radio" name="q89" value="50">B.Modérée ; quelques ajustements nécessaires</label><br>
+                <label><input type="radio" name="q89" value="100">C.Élevée ; refactorisation significative requise</label><br>
+            </div>
+            <div class="question">
+                <p>9. Quel est le niveau de documentation disponible pour la base de données monolithique ?</p>
+                <label><input type="radio" name="q90" value="0">A.Documentation complète et détaillée</label><br>
+                <label><input type="radio" name="q90" value="50">B.Documentation partielle avec certains détails manquants</label><br>
+                <label><input type="radio" name="q90" value="100">C.Documentation minimale ; informations limitées</label><br>
+            </div>
+            <div class="question">
+                <p>10. Quels outils ou pratiques sont utilisés pour gérer et optimiser la base de données monolithique ?</p>
+                <label><input type="radio" name="q91" value="0">A.Outils avancés et pratiques efficaces</label><br>
+                <label><input type="radio" name="q91" value="50">B.Outils de base avec quelques pratiques</label><br>
+                <label><input type="radio" name="q91" value="100">C.Outils limités et pratiques</label><br>
+            </div>
+            <h3>c. Base de Données Partagée :</h3>
+            <div class="question">
+                <p>11. Quel est le niveau de partage des données dans votre base de données ?</p>
+                <label><input type="radio" name="q92" value="0">A.Faible ; données peu partagées</label><br>
+                <label><input type="radio" name="q92" value="50">B.Modéré ; partage de données limité à certains modules</label><br>
+                <label><input type="radio" name="q92" value="100">C.Élevé ; partage de données entre plusieurs modules</label><br>
+            </div>
+            <div class="question">
+                <p>12. Quel est l'impact du partage de la base de données sur la sécurité et l'intégrité des données dans le cloud ?</p>
+                <label><input type="radio" name="q93" value="0">A.Aucun impact ; sécurité et intégrité maintenues</label><br>
+                <label><input type="radio" name="q93" value="50">B.Impact mineur ; légère augmentation des risques</label><br>
+                <label><input type="radio" name="q93" value="100">C.Impact significatif ; sécurité ou intégrité gravement affectées</label><br>
+            </div>
+            <div class="question">
+                <p>13. Quel est le niveau de difficulté pour isoler les données partagées dans des bases de données distinctes avant la migration ?</p>
+                <label><input type="radio" name="q94" value="0">A.Faible ; tâche simple à accomplir</label><br>
+                <label><input type="radio" name="q94" value="50">B.Modérée ; quelques ajustements nécessaires</label><br>
+                <label><input type="radio" name="q94" value="100">C.Élevée ; refactorisation significative requise</label><br>
+            </div>
+            <div class="question">
+                <p>14. Quel est le niveau de documentation et de gestion des données partagées dans votre base de données ?</p>
+                <label><input type="radio" name="q95" value="0">A.Documentation complète et gestion efficace</label><br>
+                <label><input type="radio" name="q95" value="50">B.Documentation partielle avec gestion adéquate</label><br>
+                <label><input type="radio" name="q95" value="100">C.Documentation minimale avec gestion limitée</label><br>
+            </div>
+            <div class="question">
+                <p>15. Quels outils ou pratiques sont utilisés pour gérer les problèmes liés aux données partagées ?</p>
+                <label><input type="radio" name="q96" value="0">A.Outils avancés et pratiques efficaces</label><br>
+                <label><input type="radio" name="q96" value="50">B.Outils de base avec quelques pratiques</label><br>
+                <label><input type="radio" name="q96" value="100">C.Outils limités et pratiques</label><br>
+            </div>
+            <h3>d. Base de Données Héritée :</h3>
+            <div class="question">
+                <p>.16. Quel est l'âge et la complexité de votre base de données héritée ?</p>
+                <label><input type="radio" name="q97" value="0">A.Récente et simple</label><br>
+                <label><input type="radio" name="q97" value="50">B.Ancienne mais simple</label><br>
+                <label><input type="radio" name="q97" value="100">C.Ancienne et complexe</label><br>
+            </div>
+            <div class="question">
+                <p>17.Quel est l'impact de la base de données héritée sur la migration vers le cloud ?</p>
+                <label><input type="radio" name="q98" value="0">A.Aucun impact ; migration fluide</label><br>
+                <label><input type="radio" name="q98" value="50">B.Impact mineur ; quelques ajustements nécessaires</label><br>
+                <label><input type="radio" name="q98" value="100">C.Impact significatif ; obstacles majeurs à la migration</label><br>
+            </div>
+            <div class="question">
+                <p>18.Quel est le niveau de difficulté pour mettre à jour ou remplacer la base de données héritée avant la migration ?</p>
+                <label><input type="radio" name="q99" value="0">A.Faible ; mise à jour simple</label><br>
+                <label><input type="radio" name="q99" value="50">B.Modérée ; mise à jour avec quelques ajustements</label><br>
+                <label><input type="radio" name="q99" value="100">C.Élevée ; mise à jour complexe et longue</label><br>
+            </div>
+            <div class="question">
+                <p>19.Quel est le niveau de documentation disponible pour la base de données héritée ?</p>
+                <label><input type="radio" name="q100" value="0">A.Documentation complète et détaillée</label><br>
+                <label><input type="radio" name="q100" value="50">B.Documentation partielle avec certains détails manquants</label><br>
+                <label><input type="radio" name="q100" value="100">C.Documentation minimale ; informations limitées</label><br>
+            </div>
+            <div class="question">
+                <p>20.Quels outils ou pratiques sont utilisés pour gérer et maintenir la base de données héritée  ?</p>
+                <label><input type="radio" name="q101" value="0">A.Outils avancés et pratiques efficaces</label><br>
+                <label><input type="radio" name="q101" value="50">B.Outils de base avec quelques pratiques</label><br>
+                <label><input type="radio" name="q101" value="100">C.Outils limités et pratiques</label><br>
+            </div>
+            <h3>e. Politique de Cycle de Vie des Données :</h3>
+            <div class="question">
+                <p>21. Quelle est la clarté de la politique de cycle de vie des données dans votre organisation ?</p>
+                <label><input type="radio" name="q102" value="0">A.Très claire et bien définie</label><br>
+                <label><input type="radio" name="q102" value="50">B.Claire mais avec quelques ambiguïtés</label><br>
+                <label><input type="radio" name="q102" value="100">C.Peu claire avec plusieurs ambiguïtés</label><br>
+            </div>
+            <div class="question">
+                <p>22. Quel est le niveau d'application de la politique de cycle de vie des données ?</p>
+                <label><input type="radio" name="q103" value="0">A.Complet ; politique appliquée rigoureusement</label><br>
+                <label><input type="radio" name="q103" value="50">B.Partiel ; politique appliquée avec quelques lacunes</label><br>
+                <label><input type="radio" name="q103" value="100">C.Minimale ; politique appliquée de manière limitée</label><br>
+            </div>
+            <div class="question">
+                <p>23. Quel est l'impact de la politique de cycle de vie des données sur la conformité réglementaire dans le cloud ?</p>
+                <label><input type="radio" name="q104" value="0">A.Aucun impact ; conformité maintenue</label><br>
+                <label><input type="radio" name="q104" value="50">B.Impact mineur ; légère difficulté à maintenir la conformité</label><br>
+                <label><input type="radio" name="q104" value="100">C.Impact significatif ; non-conformité grave</label><br>
+            </div>
+            <div class="question">
+                <p>24. Quel est l'effort estimé pour mettre en place ou améliorer la politique de cycle de vie des données avant la migration vers le cloud ?</p>
+                <label><input type="radio" name="q105" value="0">A.Moins d'un mois</label><br>
+                <label><input type="radio" name="q105" value="50">B.1 à 3 mois</label><br>
+                <label><input type="radio" name="q105" value="100">C.Plus de 6 mois</label><br>
+            </div>
+            <div class="question">
+                <p>25. Quels outils ou pratiques sont utilisés pour gérer le cycle de vie des données ?</p>
+                <label><input type="radio" name="q106" value="0">A.Outils avancés et pratiques efficaces</label><br>
+                <label><input type="radio" name="q106" value="50">B.Outils de base avec quelques pratiquess</label><br>
+                <label><input type="radio" name="q106" value="100">C.Outils limités et pratiques</label><br><br>
+                <button type="button" onclick="prevSection('Points de consolidation')">Précédent</button>
+                <button type="button" onclick="nextSection('Exigences non fonctionnelles')">Suivant </button> 
+            </div>
+        </div>
+        <div id="Exigences non fonctionnelles" class="section">
+            <h2>6. Exigences non fonctionnelles</h2>
+            <h3>a. Gestion d'État :</h3>
+            <div class="question">
+                <p>1. Quel est le niveau de complexité de la gestion de l'état dans votre application ?</p>
+                <label><input type="radio" name="q107" value="0">A.Faible ; gestion simple et centralisée</label><br>
+                <label><input type="radio" name="q107" value="50">B.Modéré ; gestion avec quelques complexités</label><br>
+                <label><input type="radio" name="q107" value="100">C.Élevé ; gestion complexe avec plusieurs dépendances</label><br>
+            </div>
+            <div class="question">
+                <p>2. Quel est l'impact de la gestion de l'état sur la performance de l'application dans un environnement cloud ?</p>
+                <label><input type="radio" name="q108" value="0">A.Aucun impact ; performance maintenue</label><br>
+                <label><input type="radio" name="q108" value="50">B.Impact mineur ; légère dégradation des performances</label><br>
+                <label><input type="radio" name="q108" value="100">C.Impact significatif ; dégradation sévère des performances</label><br>
+            </div>
+            <div class="question">
+                <p>3.Quels outils ou mécanismes sont utilisés pour gérer l'état dans votre application ?</p>
+                <label><input type="radio" name="q109" value="0">A.Outils avancés et mécanismes efficaces</label><br>
+                <label><input type="radio" name="q109" value="50">B.Outils de base avec quelques mécanismes</label><br>
+                <label><input type="radio" name="q109" value="100">C.Outils limités et mécanismes</label><br>
+            </div>
+            <div class="question">
+                <p>4.Quelle est la fréquence des problèmes liés à la gestion de l'état ?</p>
+                <label><input type="radio" name="q110" value="0">A.Très rare ; problèmes minimes</label><br>
+                <label><input type="radio" name="q110" value="50">B.Rare ; problèmes occasionnels</label><br>
+                <label><input type="radio" name="q110" value="100">C.Fréquent ; problèmes réguliers</label><br>
+            </div>
+            <div class="question">
+                <p>5.Quel est l'effort estimé pour améliorer ou refactorer la gestion de l'état avant la migration vers le cloud ?</p>
+                <label><input type="radio" name="q111" value="0">A.Moins d'un mois</label><br>
+                <label><input type="radio" name="q111" value="50">B.1 à 3 mois</label><br>
+                <label><input type="radio" name="q111" value="100">C.Plus de 6 mois</label><br>
+            </div>
+            <h3>b. Journalisation solé :</h3>
+            <div class="question">
+                <p>6.Quel est le niveau d'intégration des systèmes de journalisation dans votre application ?</p>
+                <label><input type="radio" name="q112" value="0">A.Complètement intégré ; journalisation centralisée</label><br>
+                <label><input type="radio" name="q112" value="50">B.Partiellement intégré ; quelques systèmes de journalisation</label><br>
+                <label><input type="radio" name="q112" value="100">C.Minime ; systèmes de journalisation séparés</label><br>
+            </div>
+            <div class="question">
+                <p>7. Quel est l'impact de la journalisation siloisée sur la surveillance et le diagnostic dans un environnement cloud ?</p>
+                <label><input type="radio" name="q113" value="0">A.Aucun impact ; surveillance et diagnostic efficaces</label><br>
+                <label><input type="radio" name="q113" value="50">B.Impact mineur ; légère difficulté à surveiller et diagnostiquer</label><br>
+                <label><input type="radio" name="q113" value="100">C.Impact significatif ; surveillance ou diagnostic gravement affectés</label><br>
+            </div>
+            <div class="question">
+                <p>8. Quel est le niveau de documentation disponible pour les systèmes de journalisation ?</p>
+                <label><input type="radio" name="q114" value="0">A.Documentation complète et détaillée</label><br>
+                <label><input type="radio" name="q114" value="50">B.Documentation partielle avec certains détails manquants</label><br>
+                <label><input type="radio" name="q114" value="100">C.Documentation minimale ; informations limitées</label><br>
+            </div>
+            <div class="question">
+                <p>9. Quel est l'effort estimé pour centraliser ou améliorer les systèmes de journalisation avant la migration vers le cloud ?</p>
+                <label><input type="radio" name="q115" value="0">A.Moins d'un mois</label><br>
+                <label><input type="radio" name="q115" value="50">B.1 à 3 mois</label><br>
+                <label><input type="radio" name="q115" value="100">C.Plus de 6 mois</label><br>
+            </div>
+            <div class="question">
+                <p>10. Quels outils ou pratiques sont utilisés pour gérer la journalisation dans votre application ?</p>
+                <label><input type="radio" name="q116" value="0">A.Outils avancés et pratiques efficaces</label><br>
+                <label><input type="radio" name="q116" value="50">B.Outils de base avec quelques pratiques</label><br>
+                <label><input type="radio" name="q116" value="100">C.Outils limités et pratiques</label><br>
+            </div>
+            <h3>d.  Authentification et Autorisation :</h3>
+            <div class="question">
+                <p>11. Quel est le niveau de sécurité des mécanismes d'authentification dans votre application ?</p>
+                <label><input type="radio" name="q117" value="0">A.Très sécurisé ; mécanismes robustes</label><br>
+                <label><input type="radio" name="q117" value="50">B.Sécurisé ; mécanismes adéquats</label><br>
+                <label><input type="radio" name="q117" value="100">C.Modérément sécurisé ; mécanismes de base</label><br>
+            </div>
+            <div class="question">
+                <p>12. Quel est le niveau de granularité des contrôles d'autorisation dans votre application ?</p>
+                <label><input type="radio" name="q118" value="0">A.Très granulaire ; contrôles détaillés</label><br>
+                <label><input type="radio" name="q118" value="50">B.Granulaire ; contrôles adéquats</label><br>
+                <label><input type="radio" name="q118" value="100">C.Basique ; contrôles limités</label><br>
+            </div>
+            <div class="question">
+                <p>13. Quel est l'impact des mécanismes d'authentification et d'autorisation sur la performance de votre application dans le cloud ?</p>
+                <label><input type="radio" name="q119" value="0">A.Aucun impact ; performance maintenue</label><br>
+                <label><input type="radio" name="q119" value="50">B.Impact mineur ; légère dégradation des performances</label><br>
+                <label><input type="radio" name="q119" value="100">C.Impact significatif ; dégradation sévère des performances</label><br>
+            </div>
+            <div class="question">
+                <p>14. Quel est le niveau de documentation disponible pour les mécanismes d'authentification et d'autorisation ?</p>
+                <label><input type="radio" name="q120" value="0">A.Documentation complète et détaillée</label><br>
+                <label><input type="radio" name="q120" value="50">B.Documentation partielle avec certains détails manquants</label><br>
+                <label><input type="radio" name="q120" value="100">C.Documentation minimale ; informations limitées</label><br>
+            </div>
+            <div class="question">
+                <p>15. Quel est l'effort estimé pour améliorer ou refactorer les mécanismes d'authentification et d'autorisation avant la migration vers le cloud ?</p>
+                <label><input type="radio" name="q121" value="0">A.Moins d'un mois</label><br>
+                <label><input type="radio" name="q121" value="50">B.1 à 3 mois</label><br>
+                <label><input type="radio" name="q121" value="100">C.Plus de 6 mois</label><br><br>
+            </div>
+            <button type="button" onclick="prevSection('Durabilité des données')">Précédent</button>
+            <button type="button" onclick="calculateScore()">Voir le score final </button>    
+            <button type="button" onclick="calculateSectionScores()">Plus de détails</button>
+            <button type="button" onclick="downloadResponses()">Télécharger les réponses</button>
+        </div>
+         
+        
+        
+    
+    
+      </form>  
+      <div id="result"></div>
+    </div>
+    
+        <script src="form.js"></script>
+        <script src="scores1.js"></script>
+        
+
+        <script>
+            async function downloadResponses() {
+                const { jsPDF } = window.jspdf;
+                const doc = new jsPDF();
+                const form = document.getElementById('percentageForm');
+                const formData = new FormData(form);
+                const responses = [];
+
+                 // Ajouter un grand texte au début de la page
+                doc.setFontSize(16);
+                doc.text("Voici les réponses du formulaire :", 10, 20);
+                
+                doc.setFontSize(12); // Réinitialiser la taille de la police pour le reste du document
+                let yPosition = 30; // Position verticale initiale après le grand texte
+        
+                // Ajouter les réponses au PDF
+                for (const [name, value] of formData.entries()) {
+                    const questionDiv = document.querySelector(`input[name="${name}"]`).closest('.question');
+                    let questionText = questionDiv.querySelector('p').textContent;
+                     // questionText = questionText.replace(/^\d+\.\s*/, ''); // Supprimer les chiffres devant les questions
+                    const optionLabel = questionDiv.querySelector(`input[name="${name}"][value="${value}"]`).parentElement;
+                    let optionText = optionLabel ? optionLabel.textContent.split(' ').slice(1).join(' ') : `Réponse ${value}`;
+                    optionText = optionText.replace(/^[A-Z]\.\s*/, ''); // Supprimer les lettres devant les réponses
+                    responses.push(`${questionText}\n ==> ${optionText}`);
+                }
+        
+                if (responses.length === 0) {
+                    alert('Veuillez remplir le formulaire avant de télécharger.');
+                    return;
+                }
+        
+                // Ajouter le texte au PDF
+                // let yPosition = 10; // Position verticale initiale
+                doc.setFontSize(12);
+                const pageWidth = doc.internal.pageSize.getWidth();
+                const margin = 10;
+                const maxLineWidth = pageWidth - margin * 2;
+        
+                responses.forEach(response => {
+                    const lines = doc.splitTextToSize(response, maxLineWidth);
+                    lines.forEach(line => {
+                        if (yPosition > 270) { // Si le texte dépasse la page, ajouter une nouvelle page
+                            doc.addPage();
+                            yPosition = 10;
+                        }
+                        doc.text(line, margin, yPosition);
+                        yPosition += 10;
+                    });
+                   // yPosition += 10; // Ajouter une ligne vide entre chaque question et réponse
+                });
+        
+                // Sauvegarder le PDF
+                doc.save('responses.pdf');
+            }
+        </script>
+        
+        
+        
+        
+        
+            
+            
+
+
+        
+</body>
+</html>
